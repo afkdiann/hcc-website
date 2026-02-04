@@ -1,24 +1,29 @@
 "use client";
 
 import { House, Menu } from "lucide-react";
-import { useState } from "react";
-import DropdownMenu from "./DropdownMenu";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+interface NavbarProps {
+  isOpen: boolean;
+  onOpen: () => void;
+}
+
+function Navbar({ isOpen, onOpen }: NavbarProps) {
   const router = useRouter();
 
   return (
-    <nav className="bg-red-900 h-24">
+    <nav
+      className={`bg-red-900 h-24 relative ${isOpen ? "hidden md:block" : ""}`}
+    >
       <div className="text-white flex justify-between">
         <ul className="font-extrabold p-4 space-x-4 hidden md:flex text-md">
           <button
             className="hover:bg-red-700 p-4"
             onClick={() => router.push("/")}
+            aria-label="Open navbar on smaller screens"
           >
-            <House aria-label="Go to home page" />
+            <House />
           </button>
           <Link
             className="hover:bg-red-700 p-4"
@@ -58,12 +63,11 @@ function Navbar() {
         </ul>
         <button
           className="flex ml-auto py-8 pr-4 my-auto md:hidden"
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={onOpen}
           aria-label="Open navbar on smaller screens"
         >
           <Menu />
         </button>
-        {isOpen && <DropdownMenu onClose={() => setIsOpen(false)} />}
       </div>
     </nav>
   );
