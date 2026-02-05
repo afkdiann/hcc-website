@@ -21,7 +21,7 @@ function HomePage() {
         <div className="flex">
           <Sidebar header="Home" sectionList={["Section 1", "Section 2", "Section 3"]} />
           <div>
-            <h1 className="p-4">Hello World!</h1>
+            <h1 className="p-4 h-196">Hello World!</h1>
           </div>
         </div>
       </main>
