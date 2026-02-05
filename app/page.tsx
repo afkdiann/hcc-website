@@ -2,6 +2,8 @@
 
 import Navbar from "@/components/Navbar";
 import DropdownMenu from "@/components/DropdownMenu";
+import Sidebar from "@/components/Sidebar";
+import Footer from "@/components/Footer";
 import { useState } from "react";
 
 function HomePage() {
@@ -16,8 +18,16 @@ function HomePage() {
         </div>
       </header>
       <main>
-        <h1 className="p-4">Hello World!</h1>
+        <div className="flex">
+          <Sidebar header="Home" sectionList={["Section 1", "Section 2", "Section 3"]}/>
+          <div>
+            <h1 className="p-4">Hello World!</h1>
+          </div>
+        </div>
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
