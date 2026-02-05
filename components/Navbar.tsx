@@ -14,9 +14,9 @@ function Navbar({ isOpen, onOpen }: NavbarProps) {
 
   return (
     <nav
-      className={`bg-red-900 h-24 relative ${isOpen ? "hidden md:block" : ""}`}
+      className={`bg-red-800 h-24 relative ${isOpen ? "hidden md:block" : ""}`}
     >
-      <div className="text-white flex justify-between">
+      <div className="text-white flex justify-between pl-32">
         <ul className="font-extrabold p-4 space-x-4 hidden md:flex text-md">
           <button
             className="hover:bg-red-700 p-4"
