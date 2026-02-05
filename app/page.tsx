@@ -19,7 +19,7 @@ function HomePage() {
       </header>
       <main>
         <div className="flex">
-          <Sidebar header="Home" sectionList={["Section 1", "Section 2", "Section 3"]}/>
+          <Sidebar header="Home" sectionList={["Section 1", "Section 2", "Section 3"]} />
           <div>
             <h1 className="p-4">Hello World!</h1>
           </div>
