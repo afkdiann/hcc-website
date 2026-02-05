@@ -2,8 +2,9 @@
 
 import Navbar from "@/components/Navbar";
 import DropdownMenu from "@/components/DropdownMenu";
-import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
+import Banner from "@/components/Banner";
+import Searchbar from "@/components/Searchbar";
 import { useState } from "react";
 
 function HomePage() {
@@ -12,17 +13,16 @@ function HomePage() {
   return (
     <div>
       <header>
+        <Searchbar />
+        <Banner />
         <Navbar isOpen={isOpen} onOpen={() => setIsOpen(true)} />
         <div aria-live="polite">
           {isOpen && <DropdownMenu onClose={() => setIsOpen(false)} />}
         </div>
       </header>
       <main>
-        <div className="flex">
-          <Sidebar header="Home" sectionList={["Section 1", "Section 2", "Section 3"]} />
-          <div>
-            <h1 className="p-4 h-196">Hello World!</h1>
-          </div>
+        <div className="h-196">
+          <h1 className="p-4">Hello World!</h1>
         </div>
       </main>
       <footer>

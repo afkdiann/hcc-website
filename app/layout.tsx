@@ -8,8 +8,8 @@ const urbanist = Urbanist({
 });
 
 export const metadata: Metadata = {
-  title: "HCC Website",
-  description: "",
+  title: "Home | Human-Centered Computing (HCC)",
+  description: "Home page of the Human-Centered Computing Website",
 };
 
 export default function RootLayout({

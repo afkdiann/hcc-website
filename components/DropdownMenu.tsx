@@ -7,7 +7,7 @@ interface DropdownMenuProps {
 
 function DropdownMenu({ onClose }: DropdownMenuProps) {
   return (
-    <div className="bg-red-900 text-white md:hidden font-extrabold text-md">
+    <div className="bg-red-800 text-white md:hidden font-extrabold text-md">
       <div className="flex justify-end items-center p-4">
         <button
           onClick={onClose}
