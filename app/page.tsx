@@ -5,6 +5,7 @@ import DropdownMenu from "@/components/DropdownMenu";
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
 import Searchbar from "@/components/Searchbar";
+import ImageCarousel from "@/components/ImageCarousel";
 import { useState } from "react";
 
 function HomePage() {
@@ -21,8 +22,9 @@ function HomePage() {
         </div>
       </header>
       <main>
-        <div className="h-196">
-          <h1 className="p-4">Hello World!</h1>
+        <div className="h-196 p-4">
+          <h1>Hello World!</h1>
+          <ImageCarousel />
         </div>
       </main>
       <footer>
