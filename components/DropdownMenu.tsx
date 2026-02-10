@@ -27,6 +27,13 @@ function DropdownMenu({ onClose }: DropdownMenuProps) {
         </Link>
         <Link
           className="hover:bg-red-700 p-4"
+          aria-label="Go to about page"
+          href="/about"
+        >
+          ABOUT
+        </Link>
+        <Link
+          className="hover:bg-red-700 p-4"
           aria-label="Go to people page"
           href="/people"
         >
