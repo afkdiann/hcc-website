@@ -1,16 +1,15 @@
 import { Metadata } from "next";
+import OpportunitiesPage from "@/pages/OpportunitiesPage";
 
 export const metadata: Metadata = {
   title: "Opportunities | Human-Centered Computing (HCC)",
   description: "Hub for student involvement",
 };
 
-function OpportunitiesPage() {
-    return ( 
-        <div>
-            
-        </div>
-     );
+function Opportunities() {
+  return (
+    <OpportunitiesPage />
+  )
 }
 
-export default OpportunitiesPage;
+export default Opportunities;

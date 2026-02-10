@@ -1,15 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import DropdownMenu from "@/components/DropdownMenu";
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
 import Searchbar from "@/components/Searchbar";
-import ImageCarousel from "@/components/ImageCarousel";
-import SectionHeader from "@/components/SectionCard";
-import { useState } from "react";
 
-function HomePage() {
+function OpportunitiesPage() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -22,18 +20,7 @@ function HomePage() {
           {isOpen && <DropdownMenu onClose={() => setIsOpen(false)} />}
         </div>
       </header>
-      <main>
-        <div className="h-196 p-4 bg-gray-100">
-          <div className="flex justify-center">
-            <ImageCarousel />
-          </div>
-          <div className="flex justify-between">
-            <SectionHeader header="NEWS" />
-            <SectionHeader header="CALENDAR" />
-            <SectionHeader header="VIDEO" />
-          </div>
-        </div>
-      </main>
+      <main className="h-196"></main>
       <footer>
         <Footer />
       </footer>
@@ -41,4 +28,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default OpportunitiesPage;

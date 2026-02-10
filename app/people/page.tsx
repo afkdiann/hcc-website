@@ -1,16 +1,15 @@
 import { Metadata } from "next";
+import PeoplePage from "@/pages/PeoplePage";
 
 export const metadata: Metadata = {
   title: "People | Human-Centered Computing (HCC)",
   description: "List of faculty members on the HCC team",
 };
 
-function PeoplePage() {
-    return ( 
-        <div>
-            
-        </div>
-     );
+function People() {
+  return(
+    <PeoplePage />
+  );
 }
 
-export default PeoplePage;
+export default People;
