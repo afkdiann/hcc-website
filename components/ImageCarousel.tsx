@@ -7,21 +7,23 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
+// TODO make card height responsive with custom breakpoints
+
 function ImageCarousel() {
   return (
-    <div className="px-16">
+    <div className="relative w-full pb-16">
       <Carousel
         opts={{
           align: "start",
         }}
-        className="w-full max-w-48 sm:max-w-xs md:max-w-sm"
+        className="w-full"
       >
         <CarouselContent>
-          {Array.from({ length: 5 }).map((_, index) => (
+          {Array.from({ length: 9 }).map((_, index) => (
             <CarouselItem key={index}>
               <div className="p-1">
-                <Card>
-                  <CardContent className="flex aspect-square items-center justify-center p-6">
+                <Card className="sm:h-48 md:h-96">
+                  <CardContent className="flex h-full items-center justify-center p-6">
                     <span className="text-3xl font-semibold">{index + 1}</span>
                   </CardContent>
                 </Card>
@@ -29,8 +31,8 @@ function ImageCarousel() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="absolute left-0 -translate-x-1/2 ml-3" />
+        <CarouselNext className="absolute right-0 translate-x-1/2 mr-3" />
       </Carousel>
     </div>
   );

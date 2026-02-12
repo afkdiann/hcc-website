@@ -1,12 +1,14 @@
 "use client";
 
+import Searchbar from "@/components/Searchbar";
+import Banner from "@/components/Banner";
 import Navbar from "@/components/Navbar";
 import DropdownMenu from "@/components/DropdownMenu";
-import Footer from "@/components/Footer";
-import Banner from "@/components/Banner";
-import Searchbar from "@/components/Searchbar";
 import ImageCarousel from "@/components/ImageCarousel";
-import SectionHeader from "@/components/SectionCard";
+import NewsSection from "@/components/NewsSection";
+import CalendarSection from "@/components/CalendarSection";
+import VideoSection from "@/components/VideoSection";
+import Footer from "@/components/Footer";
 import { useState } from "react";
 
 function HomePage() {
@@ -23,14 +25,14 @@ function HomePage() {
         </div>
       </header>
       <main>
-        <div className="h-196 p-4 bg-gray-100">
+        <div className="p-4 bg-gray-100">
           <div className="flex justify-center">
             <ImageCarousel />
           </div>
-          <div className="flex justify-between">
-            <SectionHeader header="NEWS" />
-            <SectionHeader header="CALENDAR" />
-            <SectionHeader header="VIDEO" />
+          <div className="md:flex md:justify-around px-12 space-y-12">
+            <NewsSection/>
+            <CalendarSection />
+            <VideoSection />
           </div>
         </div>
       </main>
