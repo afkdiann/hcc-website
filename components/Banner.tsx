@@ -7,7 +7,7 @@ function Banner() {
       <Link href="https://www.stonybrook.edu/">
         <div className="flex items-center m-4 md:pl-32">
           <Image
-            src="/assets/sbulogo.png"
+            src="/assets/sbulogo.svg"
             alt="Stony Brook University Logo"
             width={70}
             height={70}
@@ -17,7 +17,7 @@ function Banner() {
           </h1>
         </div>
       </Link>
-      <div className="border-l border-gray-900 h-8 my-auto hidden md:inline-flex"></div>
+      <div className="border-l border-gray-900 h-8 my-auto hidden md:inline-flex" />
       <Link href="/">
         <div className="flex items-center m-4 md:pr-32">
           <h1 className="text-xl md:text-2xl text-center">
