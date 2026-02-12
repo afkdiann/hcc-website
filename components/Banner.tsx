@@ -7,7 +7,7 @@ function Banner() {
       <Link href="https://www.stonybrook.edu/">
         <div className="flex items-center m-4 md:pl-32">
           <Image
-            src="/assets/sbulogo.png"
+            src="/assets/sbulogo.svg"
             alt="Stony Brook University Logo"
             width={70}
             height={70}
