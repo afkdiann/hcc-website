@@ -2,7 +2,7 @@ import Link from "next/link";
 
 function SocialsSideBar() {
   return (
-    <div className="fixed top-1/2 right-0 transform -translate-y-1/2 flex flex-col space-y-4 p-4 hidden md:flex">
+    <div className="fixed top-1/2 right-0 transform -translate-y-1/2 space-y-4 p-4 hidden md:flex md:flex-col">
       <Link
         href="https://www.facebook.com/stonybrooku"
         target="_blank"
