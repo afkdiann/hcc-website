@@ -9,6 +9,7 @@ import NewsSection from "@/components/NewsSection";
 import CalendarSection from "@/components/CalendarSection";
 import VideoSection from "@/components/VideoSection";
 import Footer from "@/components/Footer";
+import ReturnToTopButton from "@/components/ReturnToTopButton";
 import { useState } from "react";
 
 function HomePage() {
@@ -38,6 +39,9 @@ function HomePage() {
       </main>
       <footer>
         <Footer />
+        <div className="fixed bottom-4 right-2">
+          <ReturnToTopButton />
+        </div>
       </footer>
     </div>
   );

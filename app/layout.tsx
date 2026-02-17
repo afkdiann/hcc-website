@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Urbanist } from "next/font/google";
+import { Nunito } from "next/font/google";
 import "./globals.css";
 
-const urbanist = Urbanist({
-  variable: "--font-urbanist",
+const nunito = Nunito({
+  variable: "--font-nunito",
   subsets: ["latin"],
 });
 
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${urbanist.variable}  antialiased`}>
+      <body className={`${nunito.variable}  antialiased`}>
         {children}
       </body>
     </html>
