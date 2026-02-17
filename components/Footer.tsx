@@ -4,7 +4,7 @@ import Image from "next/image";
 function Footer() {
   return (
     <div className="w-full bg-black bg-[url('/assets/footer-background.png')] bg-cover bg-center flex justify-center items-center">
-      <div className="flex-col space-y-3 my-8 text-sm font-semibold">
+      <div className="flex-col space-y-3 my-8 text-[10px] md:text-sm font-semibold">
         <p className="text-white text-center">
           Human-Centered Computing
           <span className="border-l border-gray-600 mx-2" />
