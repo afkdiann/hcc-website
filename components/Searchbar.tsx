@@ -7,7 +7,7 @@ function Searchbar() {
   const [focused, setFocused] = useState(false);
 
   return (
-    <div className="hidden md:flex justify-end space-x-8 py-2.5 w-full bg-black bg-[url('/assets/searchbar-background.png')] bg-cover bg-center">
+    <div className="hidden md:flex justify-end space-x-8 py-2.5 w-full bg-black bg-[url('/images/searchbar-background.png')] bg-cover bg-center">
       <p className={`text-xs font-bold ${focused && "p-1"}`}>CONTACT</p>
       <label htmlFor="search" className="flex text-xs text-red-800">
         <input
