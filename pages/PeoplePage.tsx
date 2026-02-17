@@ -6,6 +6,8 @@ import DropdownMenu from "@/components/DropdownMenu";
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
 import Searchbar from "@/components/Searchbar";
+import ReturnToTopButton from "@/components/ReturnToTopButton";
+import SocialsSideBar from "@/components/SocialsSideBar";
 
 function PeoplePage() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,8 +23,14 @@ function PeoplePage() {
         </div>
       </header>
       <main className="h-196"></main>
+      <aside>
+        <SocialsSideBar />
+      </aside>
       <footer>
         <Footer />
+        <div className="fixed bottom-4 right-2">
+          <ReturnToTopButton />
+        </div>
       </footer>
     </div>
   );

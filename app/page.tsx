@@ -8,7 +8,9 @@ import ImageCarousel from "@/components/ImageCarousel";
 import NewsSection from "@/components/NewsSection";
 import CalendarSection from "@/components/CalendarSection";
 import VideoSection from "@/components/VideoSection";
+import SocialsSideBar from "@/components/SocialsSideBar";
 import Footer from "@/components/Footer";
+import ReturnToTopButton from "@/components/ReturnToTopButton";
 import { useState } from "react";
 
 function HomePage() {
@@ -36,8 +38,14 @@ function HomePage() {
           </div>
         </div>
       </main>
+      <aside>
+        <SocialsSideBar />
+      </aside>
       <footer>
         <Footer />
+        <div className="fixed bottom-4 right-2">
+          <ReturnToTopButton />
+        </div>
       </footer>
     </div>
   );
