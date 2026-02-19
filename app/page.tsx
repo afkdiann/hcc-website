@@ -31,9 +31,11 @@ function HomePage() {
           <div className="flex justify-center">
             <ImageCarousel />
           </div>
-          <div className="md:flex md:justify-around px-12 space-y-12">
+          <div className="md:flex md:justify-around px-12">
             <NewsSection/>
+            <div className="border-l hidden md:flex border-gray-300 ml-8"/>
             <CalendarSection />
+            <div className="border-l border-gray-300 hidden md:flex ml-8"/>
             <VideoSection />
           </div>
         </div>

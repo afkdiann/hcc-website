@@ -25,7 +25,7 @@ function Footer() {
             width={100}
             height={100}
           />
-          <div className="pl-4 text-black text-lg flex-col font-light leading-tight ml-4 font-serif">
+          <div className="pl-4 text-black my-auto text-[16px] md:text-md flex-col font-light leading-tight ml-4 font-serif">
             <p>Human-Centered</p>
             <p className="text-center">Computing</p>
           </div>
