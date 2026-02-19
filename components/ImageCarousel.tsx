@@ -22,7 +22,7 @@ function ImageCarousel() {
           {Array.from({ length: 9 }).map((_, index) => (
             <CarouselItem key={index}>
               <div className="p-1">
-                <Card className="sm:h-48 md:h-96">
+                <Card className="xs:h-80 sm:h-96 lg:h-120">
                   <CardContent className="flex h-full items-center justify-center p-6">
                     <span className="text-3xl font-semibold">{index + 1}</span>
                   </CardContent>

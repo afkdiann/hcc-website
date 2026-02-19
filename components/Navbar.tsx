@@ -2,7 +2,7 @@
 
 import { House, Menu } from "lucide-react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { useState } from "react";
 
 interface NavbarProps {
@@ -12,14 +12,15 @@ interface NavbarProps {
 
 function Navbar({ isOpen, onOpen }: NavbarProps) {
   const router = useRouter();
+  const pathname = usePathname() ?? "";
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
 
   return (
-    <nav className={`bg-red-800 relative ${isOpen ? "hidden md:block" : ""}`}>
+    <nav className={`bg-red-800 p-4 relative ${isOpen ? "hidden md:block" : ""}`}>
       <div className="text-white flex justify-between pl-32">
-        <ul className="font-extrabold p-4 space-x-4 hidden md:flex text-md relative">
+        <ul className="font-extrabold space-x-4 hidden md:flex text-md relative">
           <button
-            className="hover:bg-red-700 p-4"
+            className={`p-4 ${pathname === "/" ? "bg-red-700" : "hover:bg-red-700"}`}
             onClick={() => router.push("/")}
             aria-label="Open navbar on smaller screens"
           >
@@ -31,7 +32,7 @@ function Navbar({ isOpen, onOpen }: NavbarProps) {
             onMouseLeave={() => setHoveredLink(null)}
           >
             <Link
-              className="hover:bg-red-700 p-4 block"
+              className={`p-4 block ${pathname.startsWith("/about") ? "bg-red-700" : "hover:bg-red-700"}`}
               aria-label="Go to about page"
               href="/about"
             >
@@ -93,7 +94,7 @@ function Navbar({ isOpen, onOpen }: NavbarProps) {
             onMouseLeave={() => setHoveredLink(null)}
           >
             <Link
-              className="hover:bg-red-700 p-4 block"
+              className={`p-4 block ${pathname.startsWith("/people") ? "bg-red-700" : "hover:bg-red-700"}`}
               aria-label="Go to people page"
               href="/people"
             >
@@ -139,20 +140,20 @@ function Navbar({ isOpen, onOpen }: NavbarProps) {
               </ul>
             )}
           </li>
-            <Link
-              className="hover:bg-red-700 p-4 block"
-              aria-label="Go to events page"
-              href="/events"
-            >
-              EVENTS
-            </Link>
+          <Link
+            className={`p-4 block ${pathname.startsWith("/events") ? "bg-red-700" : "hover:bg-red-700"}`}
+            aria-label="Go to events page"
+            href="/events"
+          >
+            EVENTS
+          </Link>
           <li
             className="relative"
             onMouseEnter={() => setHoveredLink("news")}
             onMouseLeave={() => setHoveredLink(null)}
           >
             <Link
-              className="hover:bg-red-700 p-4 block"
+              className={`p-4 block ${pathname.startsWith("/news") ? "bg-red-700" : "hover:bg-red-700"}`}
               aria-label="Go to news page"
               href="/news"
             >
@@ -179,7 +180,7 @@ function Navbar({ isOpen, onOpen }: NavbarProps) {
             onMouseLeave={() => setHoveredLink(null)}
           >
             <Link
-              className="hover:bg-red-700 p-4 block"
+              className={`p-4 block ${pathname.startsWith("/research") ? "bg-red-700" : "hover:bg-red-700"}`}
               aria-label="Go to research page"
               href="/research"
             >
@@ -206,7 +207,7 @@ function Navbar({ isOpen, onOpen }: NavbarProps) {
             onMouseLeave={() => setHoveredLink(null)}
           >
             <Link
-              className="hover:bg-red-700 p-4 block"
+              className={`p-4 block ${pathname.startsWith("/opportunities") ? "bg-red-700" : "hover:bg-red-700"}`}
               aria-label="Go to opportunities page"
               href="/opportunities"
             >
