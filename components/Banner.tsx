@@ -17,8 +17,14 @@ function Banner() {
       <div className="border-l border-gray-900 h-8 my-auto hidden md:inline-flex" />
       <Link href="/">
         <div className="flex items-center m-4 md:pr-32">
-          <h1 className="text-xl md:text-2xl text-center font-semibold">
-            Human-Centered Computing (HCC)
+          <Image
+            src="/logos/logo.svg"
+            alt="HCC Logo"
+            width={75}
+            height={50}
+          />
+          <h1 className="text-xl md:text-2xl text-center font-semibold ml-4">
+            Human-Centered Computing
           </h1>
         </div>
       </Link>
