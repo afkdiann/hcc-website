@@ -43,10 +43,10 @@ function HomePage() {
       </aside>
       <footer>
         <Footer />
-        <div className="fixed bottom-4 right-2">
-          <ReturnToTopButton />
-        </div>
       </footer>
+      <div className="fixed bottom-4 right-2">
+          <ReturnToTopButton />
+      </div>
     </div>
   );
 }
