@@ -3,12 +3,14 @@
 import Link from "next/link";
 import { X, ChevronDown, ChevronUp, Star } from "lucide-react";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 interface DropdownMenuProps {
   onClose: () => void;
 }
 
 function DropdownMenu({ onClose }: DropdownMenuProps) {
+  const pathname = usePathname() ?? "";
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isPeopleOpen, setIsPeopleOpen] = useState(false);
   const [isNewsOpen, setIsNewsOpen] = useState(false);
@@ -28,14 +30,16 @@ function DropdownMenu({ onClose }: DropdownMenuProps) {
       </div>
       <ul className="flex flex-col">
         <Link
-          className="hover:bg-red-700 p-4"
+          className={`hover:bg-red-700 p-4 ${pathname === "/" ? "bg-red-700" : ""}`}
           aria-label="Go to home page"
           href="/"
         >
           HOME
         </Link>
 
-        <div className="flex justify-between items-center hover:bg-red-700">
+        <div
+          className={`flex justify-between items-center hover:bg-red-700 ${pathname.startsWith("/about") ? "bg-red-700" : ""}`}
+        >
           <Link
             className="hover:bg-red-700 p-4"
             aria-label="Go to about page"
@@ -63,7 +67,7 @@ function DropdownMenu({ onClose }: DropdownMenuProps) {
           <div className="bg-red-900 flex flex-col" aria-live="polite">
             <Link aria-label="Go to annual reports page" href="/about">
               <div className="flex items-center py-4 px-8 hover:bg-black">
-                <Star className="mr-4 w-4 h-4" /> 
+                <Star className="mr-4 w-4 h-4" />
                 Annual Reports
               </div>
             </Link>
@@ -75,50 +79,52 @@ function DropdownMenu({ onClose }: DropdownMenuProps) {
             </Link>
             <Link aria-label="Go to DEI page" href="/about">
               <div className="flex items-center py-4 px-8 hover:bg-black">
-                <Star className="mr-4 w-4 h-4" /> 
+                <Star className="mr-4 w-4 h-4" />
                 Diversity, Equity, & Inclusion
               </div>
             </Link>
             <Link aria-label="Go to memberships page" href="/about">
               <div className="flex items-center py-4 px-8 hover:bg-black">
-                <Star className="mr-4 w-4 h-4" /> 
+                <Star className="mr-4 w-4 h-4" />
                 Memberships
               </div>
             </Link>
             <Link aria-label="Go to mission and vision page" href="/about">
               <div className="flex items-center py-4 px-8 hover:bg-black">
-                <Star className="mr-4 w-4 h-4" /> 
+                <Star className="mr-4 w-4 h-4" />
                 Mission And Vision
               </div>
             </Link>
             <Link aria-label="Go to ORG chart page" href="/about">
               <div className="flex items-center py-4 px-8 hover:bg-black">
-                <Star className="mr-4 w-4 h-4" /> 
+                <Star className="mr-4 w-4 h-4" />
                 ORG Chart
               </div>
             </Link>
             <Link aria-label="Go to phone directory page" href="/about">
               <div className="flex items-center py-4 px-8 hover:bg-black">
-                <Star className="mr-4 w-4 h-4" /> 
+                <Star className="mr-4 w-4 h-4" />
                 Phone Directory
               </div>
             </Link>
             <Link aria-label="Go to contact page" href="/about">
               <div className="flex items-center py-4 px-8 hover:bg-black">
-                <Star className="mr-4 w-4 h-4" /> 
+                <Star className="mr-4 w-4 h-4" />
                 Contact
               </div>
             </Link>
             <Link aria-label="Go to directions page" href="/about">
               <div className="flex items-center py-4 px-8 hover:bg-black">
-                <Star className="mr-4 w-4 h-4" /> 
+                <Star className="mr-4 w-4 h-4" />
                 Directions
               </div>
             </Link>
           </div>
         )}
 
-        <div className="flex justify-between items-center hover:bg-red-700">
+        <div
+          className={`flex justify-between items-center hover:bg-red-700 ${pathname.startsWith("/people") ? "bg-red-700" : ""}`}
+        >
           <Link
             className="hover:bg-red-700 p-4"
             aria-label="Go to people page"
@@ -146,43 +152,43 @@ function DropdownMenu({ onClose }: DropdownMenuProps) {
           <div className="bg-red-900 flex flex-col" aria-live="polite">
             <Link aria-label="Go to core faculty page" href="/people">
               <div className="flex items-center py-4 px-8 hover:bg-black">
-                <Star className="mr-4 w-4 h-4" /> 
+                <Star className="mr-4 w-4 h-4" />
                 Core Faculty
               </div>
             </Link>
             <Link aria-label="Go to advisory board page" href="/people">
               <div className="flex items-center py-4 px-8 hover:bg-black">
-                <Star className="mr-4 w-4 h-4" /> 
+                <Star className="mr-4 w-4 h-4" />
                 Advisory Board
               </div>
             </Link>
             <Link aria-label="Go to affiliates page" href="/people">
               <div className="flex items-center py-4 px-8 hover:bg-black">
-                <Star className="mr-4 w-4 h-4" /> 
+                <Star className="mr-4 w-4 h-4" />
                 Affiliates
               </div>
             </Link>
             <Link aria-label="Go to alumni page" href="/people">
               <div className="flex items-center py-4 px-8 hover:bg-black">
-                <Star className="mr-4 w-4 h-4" /> 
+                <Star className="mr-4 w-4 h-4" />
                 Alumni
               </div>
             </Link>
             <Link aria-label="Go to postdocs and students page" href="/people">
               <div className="flex items-center py-4 px-8 hover:bg-black">
-                <Star className="mr-4 w-4 h-4" /> 
+                <Star className="mr-4 w-4 h-4" />
                 Postdocs & Students
               </div>
             </Link>
             <Link aria-label="Go to staff page" href="/people">
               <div className="flex items-center py-4 px-8 hover:bg-black">
-                <Star className="mr-4 w-4 h-4" /> 
+                <Star className="mr-4 w-4 h-4" />
                 Staff
               </div>
             </Link>
             <Link aria-label="Go to student association page" href="/people">
               <div className="flex items-center py-4 px-8 hover:bg-black">
-                <Star className="mr-4 w-4 h-4" /> 
+                <Star className="mr-4 w-4 h-4" />
                 Student Association
               </div>
             </Link>
@@ -190,14 +196,16 @@ function DropdownMenu({ onClose }: DropdownMenuProps) {
         )}
 
         <Link
-          className="hover:bg-red-700 p-4"
+          className={`hover:bg-red-700 p-4 ${pathname.startsWith("/events") ? "bg-red-700" : ""}`}
           aria-label="Go to events page"
           href="/events"
         >
           EVENTS
         </Link>
 
-        <div className="flex justify-between items-center hover:bg-red-700">
+        <div
+          className={`flex justify-between items-center hover:bg-red-700 ${pathname.startsWith("/news") ? "bg-red-700" : ""}`}
+        >
           <Link className="p-4 w-7/8" aria-label="Go to news page" href="/news">
             NEWS
           </Link>
@@ -221,7 +229,7 @@ function DropdownMenu({ onClose }: DropdownMenuProps) {
           <div className="bg-red-900 flex flex-col" aria-live="polite">
             <Link aria-label="Go to current news page" href="/news">
               <div className="flex items-center py-4 px-8 hover:bg-black">
-                <Star className="mr-4 w-4 h-4" /> 
+                <Star className="mr-4 w-4 h-4" />
                 Current
               </div>
             </Link>
@@ -234,7 +242,9 @@ function DropdownMenu({ onClose }: DropdownMenuProps) {
           </div>
         )}
 
-        <div className="flex justify-between items-center hover:bg-red-700">
+        <div
+          className={`flex justify-between items-center hover:bg-red-700 ${pathname.startsWith("/research") ? "bg-red-700" : ""}`}
+        >
           <Link
             className="hover:bg-red-700 p-4"
             aria-label="Go to research page"
@@ -262,7 +272,7 @@ function DropdownMenu({ onClose }: DropdownMenuProps) {
           <div className="bg-red-900 flex flex-col" aria-live="polite">
             <Link aria-label="Go to research themes page" href="/research">
               <div className="flex items-center py-4 px-8 hover:bg-black">
-                <Star className="mr-4 w-4 h-4" /> 
+                <Star className="mr-4 w-4 h-4" />
                 Research Themes
               </div>
             </Link>
@@ -275,7 +285,9 @@ function DropdownMenu({ onClose }: DropdownMenuProps) {
           </div>
         )}
 
-        <div className="flex justify-between items-center hover:bg-red-700">
+        <div
+          className={`flex justify-between items-center hover:bg-red-700 ${pathname.startsWith("/opportunities") ? "bg-red-700" : ""}`}
+        >
           <Link
             className="hover:bg-red-700 p-4"
             aria-label="Go to opportunities page"
@@ -303,7 +315,7 @@ function DropdownMenu({ onClose }: DropdownMenuProps) {
           <div className="bg-red-900 flex flex-col" aria-live="polite">
             <Link aria-label="Go to awards page" href="/opportunities">
               <div className="flex items-center py-4 px-8 hover:bg-black">
-                <Star className="mr-4 w-4 h-4" /> 
+                <Star className="mr-4 w-4 h-4" />
                 Awards
               </div>
             </Link>
