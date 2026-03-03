@@ -16,11 +16,11 @@ function Navbar({ isOpen, onOpen }: NavbarProps) {
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
 
   return (
-    <nav className={`bg-red-800 p-4 relative ${isOpen ? "hidden md:block" : ""}`}>
+    <nav className={`bg-linear-65 from-[#4361EE] to-[#B5179E] p-4 relative ${isOpen ? "hidden md:block" : ""}`}>
       <div className="text-white flex justify-between pl-32">
         <ul className="font-extrabold space-x-4 hidden md:flex text-md relative">
           <button
-            className={`p-4 ${pathname === "/" ? "bg-red-700" : "hover:bg-red-700"}`}
+            className={`p-4`}
             onClick={() => router.push("/")}
             aria-label="Open navbar on smaller screens"
           >

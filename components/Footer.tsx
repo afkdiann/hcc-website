@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function Footer() {
   return (
-    <div className="w-full bg-black bg-[url('/images/footer-background.png')] bg-cover bg-center flex justify-center items-center">
+    <div className="w-full bg-linear-65 from-[#B5179E] to-[#4361EE] bg-cover bg-center flex justify-center items-center">
       <div className="flex-col space-y-3 my-8 text-[10px] md:text-sm font-semibold">
         <p className="text-white text-center">
           Human-Centered Computing
@@ -12,13 +12,9 @@ function Footer() {
           <span className="border-l border-gray-600 mx-2" />
           Stony Brook, NY 11794-5250
         </p>
-        <p className="text-white text-center">Phone: (123) 456-7890</p>
-        <p className="text-white text-center">
-          <a href="mailto:margaret.schedel@stonybrook.edu">
-            margaret.schedel@stonybrook.edu
-          </a>
+        <p className="text-white text-center"> 
         </p>
-        <div className="bg-white flex justify-center p-4 w-2/3 mx-auto">
+        <div className="flex justify-center p-4 w-2/3 mx-auto">
           <Image
             src="/logos/logo.svg"
             alt="HCC Logo"
@@ -42,7 +38,7 @@ function Footer() {
           </Link>
         </div>
         <p className="text-white text-center">
-          © 2026{" "}
+          2026{" "}
           <Link href="https://www.stonybrook.edu/">Stony Brook University</Link>
         </p>
       </div>
