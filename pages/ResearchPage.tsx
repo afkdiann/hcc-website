@@ -5,9 +5,7 @@ import Navbar from "@/components/Navbar";
 import DropdownMenu from "@/components/DropdownMenu";
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
-import Searchbar from "@/components/Searchbar";
-import SocialsSideBar from "@/components/SocialsSideBar";
-import ReturnToTopButton from "@/components/ReturnToTopButton";
+import Searchbar from "@/components/ContactBar";
 
 function ResearchPage() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,14 +21,8 @@ function ResearchPage() {
         </div>
       </header>
       <main className="h-196"></main>
-      <aside>
-        <SocialsSideBar />
-      </aside>
       <footer>
         <Footer />
-        <div className="fixed bottom-4 right-2">
-          <ReturnToTopButton />
-        </div>
       </footer>
     </div>
   );
