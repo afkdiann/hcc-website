@@ -11,7 +11,7 @@ import {
 
 function ImageCarousel() {
   return (
-    <div className="relative w-full pb-16">
+    <div className="relative w-full">
       <Carousel
         opts={{
           align: "start",

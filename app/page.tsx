@@ -1,16 +1,11 @@
 "use client";
 
-import Searchbar from "@/components/Searchbar";
+import Searchbar from "@/components/ContactBar";
 import Banner from "@/components/Banner";
 import Navbar from "@/components/Navbar";
 import DropdownMenu from "@/components/DropdownMenu";
 import ImageCarousel from "@/components/ImageCarousel";
-import NewsSection from "@/components/NewsSection";
-import CalendarSection from "@/components/CalendarSection";
-import VideoSection from "@/components/VideoSection";
-import SocialsSideBar from "@/components/SocialsSideBar";
 import Footer from "@/components/Footer";
-import ReturnToTopButton from "@/components/ReturnToTopButton";
 import { useState } from "react";
 
 function HomePage() {
@@ -27,28 +22,25 @@ function HomePage() {
         </div>
       </header>
       <main>
-        <div className="p-4 bg-gray-100">
-          <div className="flex justify-center">
+        <div className="flex justify-center px-4 gap-4 bg-gray-100 py-8">
+          <div className="text-center w-1/3 py-1">
+            <h2 className="text-2xl font-bold mb-4">Welcome to HCC!</h2>
+              <p className="text-sm leading-4.5 md:leading-7 md:text-xl">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Praesentium aliquid esse voluptates consequuntur odio asperiores.
+                Magni eveniet maiores molestias laborum inventore? Omnis
+                voluptates assumenda expedita dolorem ipsa vel magnam
+                reprehenderit?
+              </p>
+          </div>
+          <div className="w-2/3">
             <ImageCarousel />
           </div>
-          {/* <div className="md:flex md:justify-around px-12">
-            <NewsSection/>
-            <div className="border-l hidden md:flex border-gray-300 ml-8"/>
-            <CalendarSection />
-            <div className="border-l border-gray-300 hidden md:flex ml-8"/>
-            <VideoSection />
-          </div> */}
         </div>
       </main>
-      <aside>
-        <SocialsSideBar />
-      </aside>
       <footer>
         <Footer />
       </footer>
-      <div className="fixed bottom-4 right-2">
-          <ReturnToTopButton />
-      </div>
     </div>
   );
 }

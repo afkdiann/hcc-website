@@ -12,8 +12,7 @@ function Footer() {
           <span className="border-l border-gray-600 mx-2" />
           Stony Brook, NY 11794-5250
         </p>
-        <p className="text-white text-center"> 
-        </p>
+        <p className="text-white text-center"></p>
         <div className="flex justify-center p-4 w-2/3 mx-auto">
           <Image
             src="/logos/logo.svg"
@@ -21,7 +20,7 @@ function Footer() {
             width={100}
             height={100}
           />
-          <div className="pl-4 text-black my-auto text-[16px] md:text-md flex-col font-light leading-tight ml-4 font-serif">
+          <div className="pl-4 text-white my-auto text-[12px] md:text-xl flex-col font-bold leading-tight ml-4">
             <p>Human-Centered</p>
             <p className="text-center">Computing</p>
           </div>
