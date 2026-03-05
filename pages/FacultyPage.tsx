@@ -25,7 +25,7 @@ function FacultyPage() {
         </div>
       </header>
       <main className="h-196">
-        <div className="flex py-4 px-36 text-sm">
+        <div className="flex py-4 px-12 md:px-36 text-sm">
           <p className="hover:underline hover:underline-offset-2"><Link href="/">Home</Link> </p>
           <ChevronRight className="size-5"/>
           <p className="hover:underline hover:underline-offset-2"><Link href="/people/faculty">People</Link></p>
