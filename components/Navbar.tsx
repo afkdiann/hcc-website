@@ -18,16 +18,14 @@ function Navbar({ isOpen, onOpen }: NavbarProps) {
     >
       <div className="text-white flex justify-between pl-32">
         <ul className="font-extrabold space-x-4 hidden md:flex text-md relative">
-          <button
-            className={`p-4`}
-            onClick={() => router.push("/")}
-            aria-label="Open navbar on smaller screens"
-          >
-            <House />
+          <button className="p-4 block group" onClick={() => router.push("/")}>
+            <span className="inline-block border-b-2 border-transparent group-hover:border-current">
+              <House />
+            </span>
           </button>
           <li>
             <Link
-              className="p-4 block"
+              className="p-4 block hover:underline-offset-2 hover:underline"
               aria-label="Go to about page"
               href="/about"
             >
@@ -36,7 +34,7 @@ function Navbar({ isOpen, onOpen }: NavbarProps) {
           </li>
           <li>
             <Link
-              className="p-4 block"
+              className="p-4 block hover:underline-offset-2 hover:underline"
               aria-label="Go to people page"
               href="/people"
             >
@@ -45,7 +43,7 @@ function Navbar({ isOpen, onOpen }: NavbarProps) {
           </li>
           <li>
             <Link
-              className="p-4 block"
+              className="p-4 block hover:underline-offset-2 hover:underline"
               aria-label="Go to research page"
               href="/research"
             >
@@ -54,7 +52,7 @@ function Navbar({ isOpen, onOpen }: NavbarProps) {
           </li>
           <li>
             <Link
-              className="p-4 block"
+              className="p-4 block hover:underline-offset-2 hover:underline"
               aria-label="Go to opportunities page"
               href="/opportunities"
             >
