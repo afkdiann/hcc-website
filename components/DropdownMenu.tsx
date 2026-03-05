@@ -21,27 +21,47 @@ function DropdownMenu({ onClose }: DropdownMenuProps) {
       </div>
       <ul className="flex flex-col p-4 space-y-4">
         <li>
-          <Link aria-label="Go to home page" href="/">
+          <Link
+            aria-label="Go to home page"
+            href="/"
+            className="hover:underline hover:underline-offset-2"
+          >
             HOME
           </Link>
         </li>
         <li>
-          <Link aria-label="Go to about page" href="/about">
+          <Link
+            aria-label="Go to about page"
+            href="/about"
+            className="hover:underline hover:underline-offset-2"
+          >
             ABOUT
           </Link>
         </li>
         <li>
-          <Link aria-label="Go to people page" href="/people">
+          <Link
+            aria-label="Go to people page"
+            href="/people"
+            className="hover:underline hover:underline-offset-2"
+          >
             PEOPLE
           </Link>
         </li>
         <li>
-          <Link aria-label="Go to research page" href="/research">
+          <Link
+            aria-label="Go to research page"
+            href="/research"
+            className="hover:underline hover:underline-offset-2"
+          >
             RESEARCH
           </Link>
         </li>
         <li>
-          <Link aria-label="Go to opportunities page" href="/opportunities">
+          <Link
+            aria-label="Go to opportunities page"
+            href="/opportunities"
+            className="hover:underline hover:underline-offset-2"
+          >
             OPPORTUNITIES
           </Link>
         </li>
