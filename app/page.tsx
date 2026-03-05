@@ -35,7 +35,7 @@ function HomePage() {
               >
                 Institute for Advanced Computational Science (IACS)
               </a>
-              , concerned with studying and enhancing human behavior using
+              , focused on understanding and enhancing human behavior using
               computational tools.
             </p>
           </div>

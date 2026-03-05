@@ -36,7 +36,7 @@ function Navbar({ isOpen, onOpen }: NavbarProps) {
             <Link
               className="p-4 block hover:underline-offset-2 hover:underline"
               aria-label="Go to people page"
-              href="/people"
+              href="/people/faculty"
             >
               PEOPLE
             </Link>
