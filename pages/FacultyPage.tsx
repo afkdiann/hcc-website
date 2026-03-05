@@ -12,7 +12,6 @@ import Link from "next/link";
 
 function FacultyPage() {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("Faculty");
 
   return (
     <div>
@@ -30,7 +29,7 @@ function FacultyPage() {
           <ChevronRight className="size-5"/>
           <p className="hover:underline hover:underline-offset-2"><Link href="/people/faculty">People</Link></p>
           <ChevronRight className="size-5"/>
-          <p className="hover:underline hover:underline-offset-2"><Link href={`/people/${activeSection.toLocaleLowerCase()}`}>{activeSection}</Link></p>
+          <p className="hover:underline hover:underline-offset-2"><Link href="/people/faculty">Faculty</Link></p>
         </div>
         <Sidebar header="People" sectionList={["FACULTY", "POSTDOCS", "STUDENTS"]}/>
       </main>
