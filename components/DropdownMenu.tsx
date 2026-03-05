@@ -41,7 +41,7 @@ function DropdownMenu({ onClose }: DropdownMenuProps) {
         <li>
           <Link
             aria-label="Go to people page"
-            href="/people"
+            href="/people/faculty"
             className="hover:underline hover:underline-offset-2"
           >
             PEOPLE
