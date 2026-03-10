@@ -1,9 +1,10 @@
 import PeoplePage from "@/pages/PeoplePage";
+import { postdocs } from "@/public/data";
 
 function PostDocsPage() {
 
   return ( 
-    <PeoplePage currentSection="Postdocs" />
+    <PeoplePage currentSection="Postdocs" people={postdocs} />
    );
    
 }

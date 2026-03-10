@@ -1,9 +1,9 @@
 import PeoplePage from "@/pages/PeoplePage";
+import { faculty } from "@/public/data";
 
 function FacultyPage() {
-
   return ( 
-    <PeoplePage currentSection="Faculty" />
+    <PeoplePage currentSection="Faculty" people={faculty}/>
    );
 }
 
