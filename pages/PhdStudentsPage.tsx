@@ -3,7 +3,7 @@ import PeoplePage from "@/pages/PeoplePage";
 function PhdStudentsPage() {
 
   return ( 
-    <PeoplePage currentSection="Students" people={[]}/>
+    <PeoplePage currentSection="PHD Students" />
    );
 }
 

@@ -9,20 +9,13 @@ import Searchbar from "@/components/ContactBar";
 import Sidebar from "@/components/Sidebar";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
-
-export interface Person {
-  name: string;
-  title: string;
-  department: string;
-  image: string;
-}
+import ProfileCard from "@/components/ProfileCard";
 
 interface PeoplePageProps {
   currentSection: string;
-  people: Person[];
 }
 
-function FacultyPage({ currentSection, people }: PeoplePageProps) {
+function FacultyPage({ currentSection }: PeoplePageProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -35,7 +28,7 @@ function FacultyPage({ currentSection, people }: PeoplePageProps) {
           {isOpen && <DropdownMenu onClose={() => setIsOpen(false)} />}
         </div>
       </header>
-      <main className="h-196">
+      <main className="pb-16">
         <div className="flex py-4 px-12 md:px-36 text-sm">
           <p className="hover:underline hover:underline-offset-2">
             <Link href="/">Home</Link>{" "}
@@ -51,10 +44,21 @@ function FacultyPage({ currentSection, people }: PeoplePageProps) {
             </Link>
           </p>
         </div>
-        <Sidebar
-          header="People"
-          sectionList={["FACULTY", "POSTDOCS", "PHD STUDENTS"]}
-        />
+        <div className="flex">
+          <Sidebar
+            header="People"
+            sectionList={["FACULTY", "POSTDOCS", "PHD STUDENTS"]}
+          />
+          <div className="w-2/3 mx-auto">
+            <h1 className="text-3xl font-extrabold mb-8 pt-8">{currentSection}</h1>
+            <div className="flex flex-wrap gap-8">
+              <ProfileCard />
+              <ProfileCard />
+              <ProfileCard />
+              <ProfileCard />
+            </div>
+          </div>
+        </div>
       </main>
       <footer>
         <Footer />
