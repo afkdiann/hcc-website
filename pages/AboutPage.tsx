@@ -6,8 +6,6 @@ import DropdownMenu from "@/components/DropdownMenu";
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
 import Searchbar from "@/components/ContactBar";
-import { ChevronRight } from "lucide-react";
-import Link from "next/link";
 
 function AboutPage() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,11 +21,6 @@ function AboutPage() {
         </div>
       </header>
       <main className="h-196">
-        <div className="flex py-4 px-12 md:px-36 text-sm">
-          <p className="hover:underline hover:underline-offset-2"><Link href="/">Home</Link> </p>
-          <ChevronRight className="size-5"/>
-          <p className="hover:underline hover:underline-offset-2"><Link href="/about">About</Link></p>
-        </div>
         <div className="py-8 px-4 md:px-80 space-y-6 flex flex-col items-center text-center">
           <h1 className="font-bold text-4xl border-b border-gray-400">About</h1>
           <p>Human-Centered Computing is a research theme at the <a className="text-blue-600" href="https://iacs.stonybrook.edu/index.php" target="_blank" rel="noopener">Institute for Advanced Computational Science (IACS).</a></p>
