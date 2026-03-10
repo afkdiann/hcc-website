@@ -11,7 +11,7 @@ function Sidebar({ header, sectionList }: SidebarProps) {
             <div className="border-b border-gray-900">
                 <h1 className="text-2xl font-extrabold ">{header}</h1>
             </div>
-            {sectionList.map((section, index) => <Link className="text-bold text-sm text-gray-900 py-4 hover:underline hover:underline-offset-2" href={`/people/${section.toLocaleLowerCase()}`} key={index}>{section}</Link>)}
+            {sectionList.map((section, index) => <Link className="text-bold text-sm text-gray-900 py-4 hover:underline hover:underline-offset-2" href={`/people/${section.toLocaleLowerCase().replaceAll(" ", "-")}`} key={index}>{section}</Link>)}
         </aside>
      );
 }
