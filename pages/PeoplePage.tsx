@@ -17,6 +17,7 @@ interface Person {
   department: string;
   image: string;
   website?: string;
+  email: string;
 }
 
 interface PeoplePageProps {
@@ -58,12 +59,12 @@ function FacultyPage({ currentSection, people }: PeoplePageProps) {
             header="People"
             sectionList={["FACULTY", "POSTDOCS", "PHD STUDENTS"]}
           />
-          <div className="w-2/3 mx-auto">
+          <div className="w-2/3">
             <h1 className="text-3xl font-extrabold mb-8 pt-8">{currentSection}</h1>
             <div className="flex flex-wrap gap-8">
               {people.map((person, index) => 
               <div key={index}>
-                <ProfileCard name={person.name} title={person.title} department={person.department} image={person.image} />
+                <ProfileCard name={person.name} title={person.title} department={person.department} image={person.image} website={person.website} email={person.email}/>
               </div>)}
             </div>
           </div>

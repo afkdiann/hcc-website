@@ -5,6 +5,7 @@ export const faculty = [
     department: "Department of Linguistics",
     image: "/images/people/rambow.png",
     website: "https://owenrambow.com/",
+    email: "owen.rambow@stonybrook.edu",
   },
   {
     name: "Margaret Schedel",
@@ -12,6 +13,7 @@ export const faculty = [
     department: "Department of Music",
     image: "/images/people/schedel.png",
     website: " http://schedel.net/",
+    email: "margaret.schedel@stonybrook.edu",
   },
 ];
 
@@ -22,6 +24,7 @@ export const postdocs = [
     department: "IACS",
     image: "/images/people/mudd.png",
     website: "https://katherinemudd.github.io/",
+    email: "katherine.mudd@stonybrook.edu",
   },
   {
     name: "Mason Youngblood",
@@ -29,6 +32,7 @@ export const postdocs = [
     department: "IACS",
     image: "/images/people/youngblood.png",
     website: "https://masonyoungblood.com/",
+    email: "mason.youngblood@stonybrook.edu",
   },
 ];
 
@@ -38,5 +42,6 @@ export const phdStudents = [
     title: "PhD Student",
     department: "Department of Linguistics",
     image: "/images/people/shabaeva.png",
+    email: "alina.shabaeva@stonybrook.edu",
   },
 ]
