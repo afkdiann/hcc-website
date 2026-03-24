@@ -39,7 +39,7 @@ function FacultyPage({ currentSection, people }: PeoplePageProps) {
         </div>
       </header>
       <main className="pb-16">
-        <div className="flex py-4 px-12 md:px-36 text-sm">
+        <div className="flex py-4 px-4 sm:px-8 md:px-12 lg:px-36 text-sm">
           <p className="hover:underline hover:underline-offset-2">
             <Link href="/">Home</Link>{" "}
           </p>
@@ -54,14 +54,14 @@ function FacultyPage({ currentSection, people }: PeoplePageProps) {
             </Link>
           </p>
         </div>
-        <div className="flex">
+        <div className="flex flex-col lg:flex-row">
           <Sidebar
             header="People"
             sectionList={["FACULTY", "POSTDOCS", "PHD STUDENTS"]}
           />
-          <div className="w-2/3">
-            <h1 className="text-3xl font-extrabold mb-8 pt-8">{currentSection}</h1>
-            <div className="flex flex-wrap gap-8">
+          <div className="w-full lg:w-2/3 px-4 sm:px-8 lg:px-0">
+            <h1 className="text-2xl sm:text-3xl font-extrabold mb-6 sm:mb-8 pt-6 sm:pt-8">{currentSection}</h1>
+            <div className="flex flex-wrap gap-4 sm:gap-6 md:gap-8 justify-center lg:justify-start">
               {people.map((person, index) => 
               <div key={index}>
                 <ProfileCard name={person.name} title={person.title} department={person.department} image={person.image} website={person.website} email={person.email}/>

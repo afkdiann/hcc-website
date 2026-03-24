@@ -16,16 +16,16 @@ function Navbar({ isOpen, onOpen }: NavbarProps) {
     <nav
       className={`bg-linear-65 from-[#4361EE] to-[#B5179E] p-4 relative ${isOpen ? "hidden md:block" : ""}`}
     >
-      <div className="text-white flex justify-between pl-32">
-        <ul className="font-extrabold space-x-4 hidden md:flex text-md relative">
-          <button className="p-4 block group" onClick={() => router.push("/")}>
+      <div className="text-white flex justify-between px-4 sm:px-8 md:px-8 lg:px-16 xl:px-32">
+        <ul className="font-extrabold space-x-2 lg:space-x-4 hidden md:flex text-sm sm:text-md md:text-lg relative">
+          <button className="p-3 lg:p-4 block group" onClick={() => router.push("/")}>
             <span className="inline-block border-b-2 border-transparent group-hover:border-current">
               <House />
             </span>
           </button>
           <li>
             <Link
-              className="p-4 block hover:underline-offset-2 hover:underline"
+              className="p-3 lg:p-4 block hover:underline-offset-2 hover:underline"
               aria-label="Go to about page"
               href="/about"
             >
@@ -34,7 +34,7 @@ function Navbar({ isOpen, onOpen }: NavbarProps) {
           </li>
           <li>
             <Link
-              className="p-4 block hover:underline-offset-2 hover:underline"
+              className="p-3 lg:p-4 block hover:underline-offset-2 hover:underline"
               aria-label="Go to people page"
               href="/people/faculty"
             >
@@ -43,7 +43,7 @@ function Navbar({ isOpen, onOpen }: NavbarProps) {
           </li>
           <li>
             <Link
-              className="p-4 block hover:underline-offset-2 hover:underline"
+              className="p-3 lg:p-4 block hover:underline-offset-2 hover:underline"
               aria-label="Go to research page"
               href="/research"
             >
@@ -52,7 +52,7 @@ function Navbar({ isOpen, onOpen }: NavbarProps) {
           </li>
           <li>
             <Link
-              className="p-4 block hover:underline-offset-2 hover:underline"
+              className="p-3 lg:p-4 block hover:underline-offset-2 hover:underline"
               aria-label="Go to opportunities page"
               href="/opportunities"
             >
@@ -61,7 +61,7 @@ function Navbar({ isOpen, onOpen }: NavbarProps) {
           </li>
         </ul>
         <button
-          className="flex ml-auto py-8 pr-4 my-auto md:hidden"
+          className="flex ml-auto py-4 sm:py-6 md:py-8 pr-2 sm:pr-4 my-auto md:hidden"
           onClick={onOpen}
           aria-label="Open navbar on smaller screens"
         >

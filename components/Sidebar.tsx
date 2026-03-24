@@ -7,7 +7,7 @@ interface SidebarProps{
 
 function Sidebar({ header, sectionList }: SidebarProps) {
     return (
-        <aside className="flex-col h-196 px-36 hidden md:flex w-1/3 pt-8">
+        <aside className="flex-col px-8 lg:px-16 xl:px-36 hidden lg:flex w-1/3 pt-8">
             <div className="border-b border-gray-900">
                 <h1 className="text-2xl font-extrabold ">{header}</h1>
             </div>
