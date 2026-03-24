@@ -20,7 +20,7 @@ function ResearchPage() {
           {isOpen && <DropdownMenu onClose={() => setIsOpen(false)} />}
         </div>
       </header>
-      <main className="h-196"></main>
+      <main className="min-h-screen"></main>
       <footer>
         <Footer />
       </footer>

@@ -23,10 +23,10 @@ function HomePage() {
         </div>
       </header>
       <main className="bg-gray-100">
-        <div className="flex justify-center px-4 gap-4 py-8">
-          <div className="w-1/3 py-1 flex justify-center items-center flex-col space-y-4 md:space-y-12">
-            <h2 className="text-2xl font-bold text-center">Welcome to HCC!</h2>
-            <p className="text-sm leading-4.5 md:leading-7 md:text-xl">
+        <div className="flex flex-col md:flex-row justify-center px-4 sm:px-6 md:px-8 gap-4 sm:gap-6 py-6 sm:py-8">
+          <div className="w-full md:w-1/3 py-1 flex justify-center items-center flex-col space-y-4 md:space-y-12">
+            <h2 className="text-xl xs:text-2xl md:text-3xl font-bold text-center">Welcome to HCC!</h2>
+            <p className="text-sm leading-5 sm:leading-6 md:leading-7 sm:text-base md:text-xl text-center">
               Human-Centered Computing is a research theme at the{" "}
               <a
                 className="text-blue-600"
@@ -49,12 +49,12 @@ function HomePage() {
               </p>
             </div>
           </div>
-          <div className="w-2/3">
+          <div className="w-full md:w-2/3">
             <ImageCarousel />
           </div>
         </div>
         <div className="md:hidden block pb-8">
-          <p className="text-sm leading-4.5 md:leading-7 md:text-xl text-center">
+          <p className="text-sm leading-5 sm:text-base text-center">
             Learn more about research initiatives{" "}
             <span className="text-blue-600 underline underline-offset-2">
               <Link href="/research">here</Link>
