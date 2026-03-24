@@ -41,7 +41,7 @@ function HomePage() {
             </p>
             <div className="hidden md:block">
               <p className="text-sm leading-4.5 md:leading-7 md:text-xl text-center">
-                Learn more about research initiatives{" "}
+                Learn more about our research initiatives{" "}
                 <span className="text-blue-600 underline underline-offset-2">
                   <Link href="/research">here</Link>
                 </span>
