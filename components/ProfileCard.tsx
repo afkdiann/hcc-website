@@ -38,9 +38,9 @@ function ProfileCard({
             />
           </div>
           <div className="flex flex-col space-y-2 sm:space-y-4">
-            <p className="text-base xs:text-[11px] md:text-[12px] lg:text-[14px]">{title}</p>
-            <p className="text-base xs:text-[11px] md:text-[12px] lg:text-[14px]">{department}</p>
-            <a className="not-italic text-base xs:text-[11px] md:text-[12px] lg:text-[14px]">
+            <p className="text-base xs:text-[11px] md:text-[12px] lg:text-[15px]">{title}</p>
+            <p className="text-base xs:text-[11px] md:text-[12px] lg:text-[15px]">{department}</p>
+            <a className="not-italic text-base xs:text-[11px] md:text-[12px] lg:text-[15px]">
               Email: <span className="text-blue-600 underline">{email}</span>
             </a>
           </div>
