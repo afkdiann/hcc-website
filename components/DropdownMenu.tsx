@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { X, ChevronDown, ChevronUp, ChevronRight } from "lucide-react";
+import { X, ChevronDown, ChevronUp, Star } from "lucide-react";
 import { useState } from "react";
 
 interface DropdownMenuProps {
@@ -69,13 +69,13 @@ function DropdownMenu({ onClose }: DropdownMenuProps) {
             <div className="flex flex-col" aria-live="polite">
               <Link aria-label="Go to faculty page" href="/people/faculty">
                 <div className="flex items-center py-2 px-8 hover:underline hover:underline-offset-2">
-                  <ChevronRight className="mr-4 w-4 h-4" />
+                  <Star className="mr-4 w-4 h-4" />
                   Faculty
                 </div>
               </Link>
               <Link aria-label="Go to postdocs page" href="/people/postdocs">
                 <div className="flex items-center py-2 px-8 hover:underline hover:underline-offset-2">
-                  <ChevronRight className="mr-4 w-4 h-4" />
+                  <Star className="mr-4 w-4 h-4" />
                   Postdocs
                 </div>
               </Link>
@@ -84,7 +84,7 @@ function DropdownMenu({ onClose }: DropdownMenuProps) {
                 href="/people/phd-students"
               >
                 <div className="flex items-center py-2 px-8 hover:underline hover:underline-offset-2">
-                  <ChevronRight className="mr-4 w-4 h-4" />
+                  <Star className="mr-4 w-4 h-4" />
                   PHD Students
                 </div>
               </Link>
