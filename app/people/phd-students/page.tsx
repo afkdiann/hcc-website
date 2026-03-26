@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import PhdStudentsPage from "@/pages/PhdStudentsPage";
+import PhdStudentsPage from "@/pages/People/PhdStudentsPage";
 
 export const metadata: Metadata = {
   title: "Phd Students | Human-Centered Computing (HCC)",
@@ -7,11 +7,11 @@ export const metadata: Metadata = {
 };
 
 function PhdStudent() {
-    return ( 
-        <div>
-            <PhdStudentsPage />
-        </div>
-     );
+  return (
+    <div>
+      <PhdStudentsPage />
+    </div>
+  );
 }
 
 export default PhdStudent;

@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import FacultyPage from "@/pages/FacultyPage";
+import FacultyPage from "@/pages/People/FacultyPage";
 
 export const metadata: Metadata = {
   title: "Faculty | Human-Centered Computing (HCC)",
@@ -7,11 +7,11 @@ export const metadata: Metadata = {
 };
 
 function Faculty() {
-    return ( 
-        <div>
-            <FacultyPage />
-        </div>
-     );
+  return (
+    <div>
+      <FacultyPage />
+    </div>
+  );
 }
 
 export default Faculty;

@@ -10,6 +10,7 @@ interface DropdownMenuProps {
 
 function DropdownMenu({ onClose }: DropdownMenuProps) {
   const [isPeopleOpen, setIsPeopleOpen] = useState(false);
+  const [isResearchOpen, setIsResearchOpen] = useState(false);
 
   return (
     <div className="bg-linear-65 from-[#4361EE] to-[#B5179E] text-white md:hidden font-extrabold text-md">
@@ -41,7 +42,6 @@ function DropdownMenu({ onClose }: DropdownMenuProps) {
             ABOUT
           </Link>
         </li>
-
         <li>
           <div className="flex justify-between items-center">
             <Link
@@ -91,15 +91,39 @@ function DropdownMenu({ onClose }: DropdownMenuProps) {
             </div>
           )}
         </li>
-
         <li>
-          <Link
-            aria-label="Go to research page"
-            href="/research"
-            className="hover:underline hover:underline-offset-2"
-          >
-            RESEARCH
-          </Link>
+          <div className="flex justify-between items-center">
+            <Link
+              aria-label="Go to research page"
+              href="/research"
+              className="hover:underline hover:underline-offset-2"
+            >
+              RESEARCH
+            </Link>
+            <div className="w-1/8 flex justify-center text-center">
+              {isResearchOpen ? (
+                <ChevronUp
+                  onClick={() => setIsResearchOpen(false)}
+                  aria-label="Collapse research dropdown"
+                />
+              ) : (
+                <ChevronDown
+                  onClick={() => setIsResearchOpen(true)}
+                  aria-label="Expand research dropdown"
+                />
+              )}
+            </div>
+          </div>
+          {isResearchOpen && (
+            <div className="flex flex-col" aria-live="polite">
+              <Link aria-label="Go to Dynamics of Creativity project page" href="/research/dynamics-of-creativity">
+                <div className="flex items-center py-2 px-8 hover:underline hover:underline-offset-2">
+                  <Star className="mr-4 w-4 h-4" />
+                  Dynamics of Creativity
+                </div>
+              </Link>
+            </div>
+          )}
         </li>
         <li className="pb-4">
           <Link
