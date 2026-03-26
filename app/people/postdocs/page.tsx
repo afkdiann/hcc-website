@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import PostDocsPage from "@/pages/PostDocsPage";
+import PostDocsPage from "@/pages/People/PostDocsPage";
 
 export const metadata: Metadata = {
   title: "Postdocs | Human-Centered Computing (HCC)",
@@ -7,11 +7,11 @@ export const metadata: Metadata = {
 };
 
 function PostDocs() {
-    return ( 
-        <div>
-            <PostDocsPage />
-        </div>
-     );
+  return (
+    <div>
+      <PostDocsPage />
+    </div>
+  );
 }
 
 export default PostDocs;
