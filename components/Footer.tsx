@@ -38,7 +38,7 @@ function Footer() {
         </div>
         <p className="text-white text-center xs:text-[11px] text-sm sm:text-md md:text-[14px]">
           2026{" "}
-          <Link href="https://www.stonybrook.edu/">Stony Brook University</Link>
+          <Link href="https://www.stonybrook.edu/">IACS</Link>
         </p>
       </div>
     </div>
