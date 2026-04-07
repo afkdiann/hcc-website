@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import ResearchPage from "@/pages/ResearchPage";
 import ResearchPageMainContent from "@/components/ResearchPageMainContent";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Research | Human-Centered Computing (HCC)",
@@ -9,9 +10,14 @@ export const metadata: Metadata = {
 
 function Research() {
   return(
-    <ResearchPage header="HCC Research Projects" mainContent={
-      <ResearchPageMainContent />
-    }/>
+    <div>
+      <ResearchPage header="HCC Research Projects" mainContent={
+        <ResearchPageMainContent />
+      }/>
+      <footer className="mt-12">
+        <Footer />
+      </footer>
+    </div>
   )
 }
 

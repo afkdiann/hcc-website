@@ -6,7 +6,6 @@ import DropdownMenu from "@/components/DropdownMenu";
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
 import Searchbar from "@/components/ContactBar";
-import Image from "next/image";
 
 function AboutPage() {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +28,7 @@ function AboutPage() {
           <p className="text-base sm:text-md md:text-lg text-center">
             Human-Centered Computing is a research theme at the{" "}
             <a
-              className="text-blue-600"
+              className="text-blue-500 hover:text-blue-700 visited:text-purple-600"
               href="https://iacs.stonybrook.edu/index.php"
               target="_blank"
               rel="noopener"
@@ -54,13 +53,6 @@ function AboutPage() {
             new trans-disciplinary collaborations.
           </p>
         </div>
-        <Image
-          src="/images/pickle-fountain.png"
-          alt="IACS members at the pickle fountain event"
-          width={600}
-          height={600}
-          className="xs:w-2/3 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 min-w-[200px] pb-8 mx-auto"
-        />
       </main>
       <footer>
         <Footer />

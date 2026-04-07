@@ -20,7 +20,9 @@ function OpportunitiesPage() {
           {isOpen && <DropdownMenu onClose={() => setIsOpen(false)} />}
         </div>
       </header>
-      <main className="min-h-screen"></main>
+      <main className="min-h-screen">
+        
+      </main>
       <footer>
         <Footer />
       </footer>

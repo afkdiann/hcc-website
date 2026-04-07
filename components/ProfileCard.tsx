@@ -41,7 +41,7 @@ function ProfileCard({
             <p className="text-base xs:text-[11px] md:text-[12px] lg:text-[15px]">{title}</p>
             <p className="text-base xs:text-[11px] md:text-[12px] lg:text-[15px]">{department}</p>
             <a className="not-italic text-base xs:text-[11px] md:text-[12px] lg:text-[15px]">
-              Email: <span className="text-blue-600 underline">{email}</span>
+              Email: <span className="text-blue-500 hover:text-blue-700 visited:text-purple-600 underline">{email}</span>
             </a>
           </div>
         </div>
