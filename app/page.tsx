@@ -32,7 +32,7 @@ function HomePage() {
             <p className="text-sm leading-5 sm:leading-6 md:leading-7 sm:text-base md:text-xl text-center">
               Human-Centered Computing is a research theme at the{" "}
               <a
-                className="text-blue-600"
+                className="text-blue-500 hover:text-blue-700 visited:text-purple-600"
                 href="https://iacs.stonybrook.edu/index.php"
                 target="_blank"
                 rel="noopener"
@@ -44,9 +44,9 @@ function HomePage() {
             </p>
             <div className="hidden lg:block">
               <p className="text-sm leading-4.5 md:leading-7 md:text-xl text-center">
-                Learn more about our research initiatives{" "}
-                <span className="text-blue-600 underline underline-offset-2">
-                  <Link href="/research">here</Link>
+                To stay updated on our research initiatives, join our Slack channel{" "}
+                <span className="text-blue-500 hover:text-blue-700 visited:text-purple-600 font-bold underline underline-offset-2">
+                  <a href="https://humancentered-dat7985.slack.com/join/shared_invite/zt-3ucxalaaq-wLQXki9A82D6XN5oZHyvBQ#/shared-invite/email">here</a>
                 </span>
                 .
               </p>
@@ -58,9 +58,9 @@ function HomePage() {
         </div>
         <div className="lg:hidden block pb-8">
           <p className="text-sm leading-5 sm:text-base text-center">
-            Learn more about our research initiatives{" "}
-            <span className="text-blue-600 underline underline-offset-2">
-              <Link href="/research">here</Link>
+            To stay updated on our research initiatives, join our Slack channel{" "}
+            <span className="text-blue-500 hover:text-blue-700 visited:text-purple-600 font-bold underline underline-offset-2">
+              <a href="https://humancentered-dat7985.slack.com/join/shared_invite/zt-3ucxalaaq-wLQXki9A82D6XN5oZHyvBQ#/shared-invite/email">here</a>
             </span>
             .
           </p>

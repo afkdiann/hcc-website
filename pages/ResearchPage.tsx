@@ -29,7 +29,7 @@ function ResearchPage({ header, currentSection, mainContent }: ResearchPageProps
           {isOpen && <DropdownMenu onClose={() => setIsOpen(false)} />}
         </div>
       </header>
-      <main className="min-h-screen">
+      <main>
         <div className="flex py-4 px-8 lg:px-16 xl:px-36 text-sm">
           <p className="hover:underline hover:underline-offset-2">
             <Link href="/">Home</Link>{" "}
@@ -59,9 +59,6 @@ function ResearchPage({ header, currentSection, mainContent }: ResearchPageProps
           </div>
         </div>
       </main>
-      <footer>
-        <Footer />
-      </footer>
     </div>
   );
 }

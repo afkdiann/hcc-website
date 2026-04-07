@@ -7,9 +7,9 @@ function Footer() {
       <div className="flex-col space-y-3 my-8 text-xs sm:text-sm font-semibold px-4 sm:px-8">
         <p className="text-white text-center xs:text-[11px] text-sm sm:text-md md:text-[14px]">
           Human-Centered Computing
-          <span className="border-l border-gray-600 mx-1 sm:mx-2" />
+          <span className="border-l border-gray-700 mx-1 sm:mx-2" />
           Stony Brook University
-          <span className="border-l border-gray-600 mx-1 sm:mx-2" />
+          <span className="border-l border-gray-700 mx-1 sm:mx-2" />
           Stony Brook, NY 11794-5250
         </p>
         <div className="flex justify-center p-4 w-full xs:w-2/3 mx-auto">
