@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import DropdownMenu from "@/components/DropdownMenu";
-import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
 import Searchbar from "@/components/ContactBar";
 import Link from "next/link";
