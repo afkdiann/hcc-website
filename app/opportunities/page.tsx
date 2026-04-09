@@ -1,15 +1,24 @@
 import { Metadata } from "next";
 import OpportunitiesPage from "@/pages/OpportunitiesPage";
+import OpportunitiesPageMainContent from "@/components/OpportunitiesPageMainContent";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Opportunities | Human-Centered Computing (HCC)",
   description: "Hub for student involvement",
 };
 
-function Opportunities() {
-  return (
-    <OpportunitiesPage />
+function Research() {
+  return(
+    <div>
+      <OpportunitiesPage header="Opportunities" mainContent={
+        <OpportunitiesPageMainContent />
+      }/>
+      <footer className="mt-12">
+        <Footer />
+      </footer>
+    </div>
   )
 }
 
-export default Opportunities;
+export default Research;
