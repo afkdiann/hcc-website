@@ -29,23 +29,23 @@ function OpportunitiesPage({ header, currentSection, mainContent }: Opportunitie
         </div>
       </header>
       <main>
-        <div className="flex py-4 px-8 lg:px-16 xl:px-36 text-sm">
+        <nav aria-label="Breadcrumb" className="flex py-4 px-8 lg:px-16 xl:px-36 text-sm">
           <p className="hover:underline hover:underline-offset-2">
-            <Link href="/">Home</Link>{" "}
+            <Link href="/" aria-label="Go to home page">Home</Link>{" "}
           </p>
-          <ChevronRight className="size-5" />
+          <ChevronRight className="size-5" aria-hidden="true" />
           <p className="hover:underline hover:underline-offset-2">
-            <Link href="/opportunities">Opportunities</Link>
+            <Link href="/opportunities" aria-label="Go to opportunities page">Opportunities</Link>
           </p>
           {currentSection && <>
-            <ChevronRight className="size-5" />
+            <ChevronRight className="size-5" aria-hidden="true" />
             <p className="hover:underline hover:underline-offset-2">
-              <Link href={`/opportunities/${currentSection?.toLowerCase().replace(" ", "-")}`}>
+              <Link href={`/opportunities/${currentSection?.toLowerCase().replace(" ", "-")}`} aria-current="page">
                 {currentSection}
               </Link>
             </p>
           </>}
-        </div>
+        </nav>
         <div className="flex flex-col lg:flex-row">
           <Sidebar
             header="Opportunities"

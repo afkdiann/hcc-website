@@ -13,14 +13,14 @@ function DropdownMenu({ onClose }: DropdownMenuProps) {
   const [isResearchOpen, setIsResearchOpen] = useState(false);
 
   return (
-    <div className="bg-linear-65 from-[#4361EE] to-[#B5179E] text-white md:hidden font-extrabold text-md">
+    <div id="mobile-navigation-menu" role="navigation" aria-label="Mobile navigation" className="bg-linear-65 from-[#4361EE] to-[#B5179E] text-white md:hidden font-extrabold text-md">
       <div className="flex justify-end items-center p-4 hover:">
         <button
           onClick={onClose}
           aria-label="Close navbar on smaller screens"
           className="mt-4"
         >
-          <X />
+          <X aria-hidden="true" />
         </button>
       </div>
       <ul className="flex flex-col p-4 space-y-4">
@@ -52,43 +52,49 @@ function DropdownMenu({ onClose }: DropdownMenuProps) {
               PEOPLE
             </Link>
             <div className="w-1/8 flex justify-center text-center">
-              {isPeopleOpen ? (
-                <ChevronUp
-                  onClick={() => setIsPeopleOpen(false)}
-                  aria-label="Collapse people dropdown"
-                />
-              ) : (
-                <ChevronDown
-                  onClick={() => setIsPeopleOpen(true)}
-                  aria-label="Expand people dropdown"
-                />
-              )}
+              <button
+                onClick={() => setIsPeopleOpen(!isPeopleOpen)}
+                aria-label={isPeopleOpen ? "Collapse people submenu" : "Expand people submenu"}
+                aria-expanded={isPeopleOpen}
+              >
+                {isPeopleOpen ? (
+                  <ChevronUp aria-hidden="true" />
+                ) : (
+                  <ChevronDown aria-hidden="true" />
+                )}
+              </button>
             </div>
           </div>
           {isPeopleOpen && (
-            <div className="flex flex-col" aria-live="polite">
-              <Link aria-label="Go to faculty page" href="/people/faculty">
-                <div className="flex items-center py-2 px-8 hover:underline hover:underline-offset-2">
-                  <Star className="mr-4 w-4 h-4" />
-                  Faculty
-                </div>
-              </Link>
-              <Link aria-label="Go to postdocs page" href="/people/postdocs">
-                <div className="flex items-center py-2 px-8 hover:underline hover:underline-offset-2">
-                  <Star className="mr-4 w-4 h-4" />
-                  Postdocs
-                </div>
-              </Link>
-              <Link
-                aria-label="Go to phd students page"
-                href="/people/phd-students"
-              >
-                <div className="flex items-center py-2 px-8 hover:underline hover:underline-offset-2">
-                  <Star className="mr-4 w-4 h-4" />
-                  PHD Students
-                </div>
-              </Link>
-            </div>
+            <ul className="flex flex-col" aria-live="polite">
+              <li>
+                <Link aria-label="Go to faculty page" href="/people/faculty">
+                  <div className="flex items-center py-2 px-8 hover:underline hover:underline-offset-2">
+                    <Star className="mr-4 w-4 h-4" aria-hidden="true" />
+                    Faculty
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link aria-label="Go to postdocs page" href="/people/postdocs">
+                  <div className="flex items-center py-2 px-8 hover:underline hover:underline-offset-2">
+                    <Star className="mr-4 w-4 h-4" aria-hidden="true" />
+                    Postdocs
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  aria-label="Go to PhD students page"
+                  href="/people/phd-students"
+                >
+                  <div className="flex items-center py-2 px-8 hover:underline hover:underline-offset-2">
+                    <Star className="mr-4 w-4 h-4" aria-hidden="true" />
+                    PHD Students
+                  </div>
+                </Link>
+              </li>
+            </ul>
           )}
         </li>
         <li>
@@ -101,28 +107,30 @@ function DropdownMenu({ onClose }: DropdownMenuProps) {
               RESEARCH
             </Link>
             <div className="w-1/8 flex justify-center text-center">
-              {isResearchOpen ? (
-                <ChevronUp
-                  onClick={() => setIsResearchOpen(false)}
-                  aria-label="Collapse research dropdown"
-                />
-              ) : (
-                <ChevronDown
-                  onClick={() => setIsResearchOpen(true)}
-                  aria-label="Expand research dropdown"
-                />
-              )}
+              <button
+                onClick={() => setIsResearchOpen(!isResearchOpen)}
+                aria-label={isResearchOpen ? "Collapse research submenu" : "Expand research submenu"}
+                aria-expanded={isResearchOpen}
+              >
+                {isResearchOpen ? (
+                  <ChevronUp aria-hidden="true" />
+                ) : (
+                  <ChevronDown aria-hidden="true" />
+                )}
+              </button>
             </div>
           </div>
           {isResearchOpen && (
-            <div className="flex flex-col" aria-live="polite">
-              <Link aria-label="Go to Dynamics of Creativity project page" href="/research/dynamics-of-creativity">
-                <div className="flex items-center py-2 px-8 hover:underline hover:underline-offset-2">
-                  <Star className="mr-4 w-4 h-4" />
-                  Dynamics of Creativity
-                </div>
-              </Link>
-            </div>
+            <ul className="flex flex-col" aria-live="polite">
+              <li>
+                <Link aria-label="Go to Dynamics of Creativity project page" href="/research/dynamics-of-creativity">
+                  <div className="flex items-center py-2 px-8 hover:underline hover:underline-offset-2">
+                    <Star className="mr-4 w-4 h-4" aria-hidden="true" />
+                    Dynamics of Creativity
+                  </div>
+                </Link>
+              </li>
+            </ul>
           )}
         </li>
         <li className="pb-4">
