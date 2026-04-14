@@ -31,7 +31,8 @@ function AboutPage() {
               className="text-blue-500 hover:text-blue-700 visited:text-purple-600"
               href="https://iacs.stonybrook.edu/index.php"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
+              aria-label="Visit the Institute for Advanced Computational Science (IACS) website (opens in new tab)"
             >
               Institute for Advanced Computational Science (IACS).
             </a>

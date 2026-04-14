@@ -1,3 +1,5 @@
+"use client";
+
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -5,17 +7,36 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 function ImageCarousel() {
   const imageFiles = [
-    "exp-conditions.png",
-    "artbreeder_study_example_a.png",
-    "artbreeder_study_example_b.png",
-    "speed_climbing_example_a.png",
-    "speed_climbing_example_b.png",
+    {src: "exp-conditions.png", alt: "Diagram showing experimental conditions for the HCC research study"},
+    {src: "artbreeder_study_example_a.png", alt: "Artbreeder study example A — artwork for creativity research"},
+    {src: "artbreeder_study_example_b.png", alt: "Artbreeder study example B — artwork for creativity research"},
+    {src: "speed_climbing_example_a.png", alt: "Speed climbing analysis example A — movement tracking visualization"},
+    {src: "speed_climbing_example_b.png", alt: "Speed climbing analysis example B — movement tracking visualization"},
   ];
+
+  const [api, setApi] = useState<CarouselApi>();
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    if(!api){
+      return;
+    }
+    const onSelect = () => {
+      setCurrentIndex(api.selectedScrollSnap());
+    };
+    onSelect();
+    api.on("select", onSelect);
+    return () => {
+      api.off("select", onSelect);
+    };
+  }, [api]);
 
   return (
     <div className="relative w-full">
@@ -24,16 +45,18 @@ function ImageCarousel() {
           align: "start",
         }}
         className="w-full"
+        aria-label="Research image gallery"
+        setApi={setApi}
       >
         <CarouselContent>
-          {Array.from({ length: imageFiles.length }).map((_, index) => (
-            <CarouselItem key={index}>
+          {imageFiles.map((image, index) => (
+            <CarouselItem key={index} aria-label={`Slide ${index + 1} of ${imageFiles.length}: ${image.alt}`}>
               <div className="p-1">
                 <Card className="h-48 xs:h-64 sm:h-80 md:h-96 lg:h-120">
                   <CardContent className="flex h-full items-center justify-center p-6">
                     <Image
-                      src={"/images/research/" + imageFiles[index]}
-                      alt="Research Image"
+                      src={"/images/research/" + image.src}
+                      alt={image.alt}
                       width={750}
                       height={500}
                       className="object-contain w-full h-full"
@@ -47,6 +70,9 @@ function ImageCarousel() {
         <CarouselPrevious className="absolute left-0 -translate-x-1/2 ml-3" />
         <CarouselNext className="absolute right-0 translate-x-1/2 mr-3" />
       </Carousel>
+      <div className="sr-only" aria-live="assertive" aria-atomic="true">
+        {`Slide ${currentIndex + 1} of ${imageFiles.length}: ${imageFiles[currentIndex].alt}`}
+      </div>
     </div>
   );
 }

@@ -39,21 +39,21 @@ function FacultyPage({ currentSection, people }: PeoplePageProps) {
         </div>
       </header>
       <main className="pb-16">
-        <div className="flex py-4 px-8 lg:px-16 xl:px-36 text-sm">
+        <nav aria-label="Breadcrumb" className="flex py-4 px-8 lg:px-16 xl:px-36 text-sm">
           <p className="hover:underline hover:underline-offset-2">
-            <Link href="/">Home</Link>{" "}
+            <Link href="/" aria-label="Go to home page">Home</Link>{" "}
           </p>
-          <ChevronRight className="size-5" />
+          <ChevronRight className="size-5" aria-hidden="true" />
           <p className="hover:underline hover:underline-offset-2">
-            <Link href="/people/faculty">People</Link>
+            <Link href="/people/faculty" aria-label="Go to people page">People</Link>
           </p>
-          <ChevronRight className="size-5" />
+          <ChevronRight className="size-5" aria-hidden="true" />
           <p className="hover:underline hover:underline-offset-2">
-            <Link href={`/people/${currentSection.toLocaleLowerCase()}`}>
+            <Link href={`/people/${currentSection.toLocaleLowerCase()}`} aria-current="page">
               {currentSection}
             </Link>
           </p>
-        </div>
+        </nav>
         <div className="flex flex-col lg:flex-row">
           <Sidebar
             header="People"

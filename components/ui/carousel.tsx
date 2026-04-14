@@ -28,6 +28,8 @@ type CarouselContextProps = {
   scrollNext: () => void
   canScrollPrev: boolean
   canScrollNext: boolean
+  currentIndex: number
+  slideCount: number
 } & CarouselProps
 
 const CarouselContext = React.createContext<CarouselContextProps | null>(null)
@@ -60,11 +62,15 @@ function Carousel({
   )
   const [canScrollPrev, setCanScrollPrev] = React.useState(false)
   const [canScrollNext, setCanScrollNext] = React.useState(false)
+  const [currentIndex, setCurrentIndex] = React.useState(0)
+  const [slideCount, setSlideCount] = React.useState(0)
 
   const onSelect = React.useCallback((api: CarouselApi) => {
     if (!api) return
     setCanScrollPrev(api.canScrollPrev())
     setCanScrollNext(api.canScrollNext())
+    setCurrentIndex(api.selectedScrollSnap())
+    setSlideCount(api.scrollSnapList().length)
   }, [])
 
   const scrollPrev = React.useCallback(() => {
@@ -116,6 +122,8 @@ function Carousel({
         scrollNext,
         canScrollPrev,
         canScrollNext,
+        currentIndex,
+        slideCount,
       }}
     >
       <div
@@ -123,6 +131,8 @@ function Carousel({
         className={cn("relative", className)}
         role="region"
         aria-roledescription="carousel"
+        aria-label={props["aria-label"] || `Carousel: slide ${currentIndex + 1} of ${slideCount}`}
+        tabIndex={0}
         data-slot="carousel"
         {...props}
       >
@@ -154,12 +164,34 @@ function CarouselContent({ className, ...props }: React.ComponentProps<"div">) {
 }
 
 function CarouselItem({ className, ...props }: React.ComponentProps<"div">) {
-  const { orientation } = useCarousel()
+  const { orientation, currentIndex } = useCarousel()
+
+  // Assign a stable index on first render by counting siblings
+  const parentRef = React.useRef<HTMLDivElement>(null)
+  const [itemIndex, setItemIndex] = React.useState<number>(-1)
+
+  React.useEffect(() => {
+    if (parentRef.current) {
+      const parent = parentRef.current.parentElement
+      if (parent) {
+        const siblings = Array.from(parent.children).filter(
+          (el) => el.getAttribute("data-slot") === "carousel-item"
+        )
+        const idx = siblings.indexOf(parentRef.current)
+        setItemIndex(idx)
+      }
+    }
+  }, [])
+
+  const isActive = itemIndex === currentIndex
 
   return (
     <div
+      ref={parentRef}
       role="group"
       aria-roledescription="slide"
+      aria-hidden={!isActive}
+      inert={!isActive ? true : undefined}
       data-slot="carousel-item"
       className={cn(
         "min-w-0 shrink-0 grow-0 basis-full",
