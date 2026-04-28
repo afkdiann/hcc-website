@@ -1,3 +1,11 @@
+const imageFiles = [
+  {src: "exp-conditions.png", alt: "Diagram showing experimental conditions for the HCC research study"},
+  {src: "artbreeder_study_example_a.png", alt: "Artbreeder study example A — artwork for creativity research"},
+  {src: "artbreeder_study_example_b.png", alt: "Artbreeder study example B — artwork for creativity research"},
+  {src: "speed_climbing_example_a.png", alt: "Speed climbing analysis example A — movement tracking visualization"},
+  {src: "speed_climbing_example_b.png", alt: "Speed climbing analysis example B — movement tracking visualization"},
+];
+
 const faculty = [
   {
     name: "Owen Rambow",
@@ -61,4 +69,4 @@ const opportunities = [
   }
 ]
 
-export {faculty, postdocs, phdStudents, researchProjects };
+export { imageFiles, faculty, postdocs, phdStudents, researchProjects, opportunities };
