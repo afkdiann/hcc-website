@@ -11,16 +11,10 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { imageFiles } from "@/public/data";
+
 
 function ImageCarousel() {
-  const imageFiles = [
-    {src: "exp-conditions.png", alt: "Diagram showing experimental conditions for the HCC research study"},
-    {src: "artbreeder_study_example_a.png", alt: "Artbreeder study example A — artwork for creativity research"},
-    {src: "artbreeder_study_example_b.png", alt: "Artbreeder study example B — artwork for creativity research"},
-    {src: "speed_climbing_example_a.png", alt: "Speed climbing analysis example A — movement tracking visualization"},
-    {src: "speed_climbing_example_b.png", alt: "Speed climbing analysis example B — movement tracking visualization"},
-  ];
-
   const [api, setApi] = useState<CarouselApi>();
   const [currentIndex, setCurrentIndex] = useState(0);
 
