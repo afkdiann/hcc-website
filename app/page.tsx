@@ -7,7 +7,6 @@ import DropdownMenu from "@/components/DropdownMenu";
 import ImageCarousel from "@/components/ImageCarousel";
 import Footer from "@/components/Footer";
 import { useState } from "react";
-import Link from "next/link";
 
 function HomePage() {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,9 +45,7 @@ function HomePage() {
             <div className="hidden lg:block">
               <p className="text-sm leading-4.5 md:leading-7 md:text-xl text-center">
                 To stay updated on our research initiatives, join our Slack channel{" "}
-                <span className="text-blue-500 hover:text-blue-700 visited:text-purple-600 font-bold underline underline-offset-2">
-                  <a href="https://humancentered-dat7985.slack.com/join/shared_invite/zt-3ucxalaaq-wLQXki9A82D6XN5oZHyvBQ#/shared-invite/email" target="_blank" rel="noopener noreferrer" aria-label="Join the HCC Slack channel (opens in new tab)">here</a>
-                </span>
+                <a className="text-blue-500 hover:text-blue-700 visited:text-purple-600 font-bold underline underline-offset-2" href="https://humancentered-dat7985.slack.com/join/shared_invite/zt-3ucxalaaq-wLQXki9A82D6XN5oZHyvBQ#/shared-invite/email" target="_blank" rel="noopener noreferrer" aria-label="Join the HCC Slack channel (opens in new tab)">here</a>
                 .
               </p>
             </div>
@@ -60,9 +57,7 @@ function HomePage() {
         <div className="lg:hidden block pb-8">
           <p className="text-sm leading-5 sm:text-base text-center">
             To stay updated on our research initiatives, join our Slack channel{" "}
-            <span className="text-blue-500 hover:text-blue-700 visited:text-purple-600 font-bold underline underline-offset-2">
-              <a href="https://humancentered-dat7985.slack.com/join/shared_invite/zt-3ucxalaaq-wLQXki9A82D6XN5oZHyvBQ#/shared-invite/email" target="_blank" rel="noopener noreferrer" aria-label="Join the HCC Slack channel (opens in new tab)">here</a>
-            </span>
+            <a className="text-blue-500 hover:text-blue-700 visited:text-purple-600 font-bold underline underline-offset-2" href="https://humancentered-dat7985.slack.com/join/shared_invite/zt-3ucxalaaq-wLQXki9A82D6XN5oZHyvBQ#/shared-invite/email" target="_blank" rel="noopener noreferrer" aria-label="Join the HCC Slack channel (opens in new tab)">here</a>
             .
           </p>
         </div>

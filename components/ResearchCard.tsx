@@ -10,7 +10,7 @@ function ResearchCard({ name, members, slug }: ResearchCardProps) {
   return (
     <article
       aria-label={`Research project: ${name}`}
-      className="p-0.5 rounded-lg bg-linear-to-br from-[#4361EE] to-[#B5179E] w-full xs:w-96 sm:w-108 md:w-120 xl:w-140"
+      className="p-0.5 rounded-lg bg-linear-to-br from-[#4361EE] to-[#B5179E] w-full xs:w-96 sm:w-108 md:w-120 xl:w-140 min-h-48 sm:min-h-56 md:min-h-60"
     >
       <Link
         href={`/research/${slug}`}
