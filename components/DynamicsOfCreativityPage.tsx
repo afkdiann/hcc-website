@@ -22,7 +22,7 @@ function DynamicsOfCreativityPage() {
         }
       />
       <Image
-        src="/images/pickle-fountain.png"
+        src="./images/pickle-fountain.png"
         alt="IACS members at the pickle fountain event"
         width={600}
         height={600}

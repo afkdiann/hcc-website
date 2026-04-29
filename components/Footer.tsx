@@ -14,7 +14,7 @@ function Footer() {
         </p>
         <div className="flex justify-center p-4 w-full xs:w-2/3 mx-auto">
           <Image
-            src="/logos/hcc_logo_white.svg"
+            src="./logos/hcc_logo_white.svg"
             alt="Human-Centered Computing logo"
             width={100}
             height={100}
