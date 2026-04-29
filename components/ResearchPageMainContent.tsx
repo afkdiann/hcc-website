@@ -1,4 +1,4 @@
-import { researchProjects } from "@/public/data";
+import { researchProjects } from "@/lib/data";
 import ResearchCard from "@/components/ResearchCard";
 
 function ResearchPageMainContent() {

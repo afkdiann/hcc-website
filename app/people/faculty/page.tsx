@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import FacultyPage from "@/pages/People/FacultyPage";
+import FacultyPage from "@/components/FacultyPage";
 
 export const metadata: Metadata = {
   title: "Faculty | Human-Centered Computing (HCC)",

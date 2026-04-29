@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import OpportunitiesPage from "@/pages/OpportunitiesPage";
+import OpportunitiesPage from "@/components/OpportunitiesPage";
 import OpportunitiesPageMainContent from "@/components/OpportunitiesPageMainContent";
 import Footer from "@/components/Footer";
 
@@ -9,16 +9,17 @@ export const metadata: Metadata = {
 };
 
 function Research() {
-  return(
+  return (
     <div>
-      <OpportunitiesPage header="Opportunities" mainContent={
-        <OpportunitiesPageMainContent />
-      }/>
+      <OpportunitiesPage
+        header="Opportunities"
+        mainContent={<OpportunitiesPageMainContent />}
+      />
       <footer className="mt-12">
         <Footer />
       </footer>
     </div>
-  )
+  );
 }
 
 export default Research;

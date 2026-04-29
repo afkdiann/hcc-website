@@ -11,15 +11,14 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { imageFiles } from "@/public/data";
-
+import { imageFiles } from "@/lib/data";
 
 function ImageCarousel() {
   const [api, setApi] = useState<CarouselApi>();
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    if(!api){
+    if (!api) {
       return;
     }
     const onSelect = () => {
@@ -44,7 +43,10 @@ function ImageCarousel() {
       >
         <CarouselContent>
           {imageFiles.map((image, index) => (
-            <CarouselItem key={index} aria-label={`Slide ${index + 1} of ${imageFiles.length}: ${image.alt}`}>
+            <CarouselItem
+              key={index}
+              aria-label={`Slide ${index + 1} of ${imageFiles.length}: ${image.alt}`}
+            >
               <div className="p-1">
                 <Card className="h-48 xs:h-64 sm:h-80 md:h-96 lg:h-120">
                   <CardContent className="flex h-full items-center justify-center p-6">

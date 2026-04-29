@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import AboutPage from "@/pages/AboutPage";
+import AboutPage from "@/components/AboutPage";
 
 export const metadata: Metadata = {
   title: "About | Human-Centered Computing (HCC)",
@@ -7,9 +7,7 @@ export const metadata: Metadata = {
 };
 
 function About() {
-  return (
-    <AboutPage />
-  );
+  return <AboutPage />;
 }
 
 export default About;

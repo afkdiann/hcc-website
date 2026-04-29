@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import ResearchPage from "@/pages/ResearchPage";
+import ResearchPage from "@/components/ResearchPage";
 import ResearchPageMainContent from "@/components/ResearchPageMainContent";
 import Footer from "@/components/Footer";
 
@@ -9,16 +9,17 @@ export const metadata: Metadata = {
 };
 
 function Research() {
-  return(
+  return (
     <div>
-      <ResearchPage header="HCC Research Projects" mainContent={
-        <ResearchPageMainContent />
-      }/>
+      <ResearchPage
+        header="HCC Research Projects"
+        mainContent={<ResearchPageMainContent />}
+      />
       <footer className="mt-12">
         <Footer />
       </footer>
     </div>
-  )
+  );
 }
 
 export default Research;

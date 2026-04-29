@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import DynamicsOfCreativityPage from "@/pages/ResearchProjects/DynamicsOfCreativityPage";
+import DynamicsOfCreativityPage from "@/components/DynamicsOfCreativityPage";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
@@ -8,12 +8,12 @@ export const metadata: Metadata = {
 };
 
 export default function DynamicsOfCreativity() {
-  return(
+  return (
     <div>
-        <DynamicsOfCreativityPage />
-        <footer>
-          <Footer />
-        </footer>
+      <DynamicsOfCreativityPage />
+      <footer>
+        <Footer />
+      </footer>
     </div>
-  )
+  );
 }

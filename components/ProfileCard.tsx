@@ -21,14 +21,15 @@ function ProfileCard({
   return (
     <article aria-label={`Profile card for ${name}`} className="p-0.5 rounded-lg bg-linear-to-br from-[#4361EE] to-[#B5179E] w-full xs:h-60 sm:h-64 md:h-72 lg:h-80 xl:h-88 xs:w-96 sm:w-108 md:w-120 xl:w-140">
       <div className="bg-white rounded-lg h-full p-4 sm:p-6 space-y-3 sm:space-y-4 flex flex-col">
-        <Link
+        <a
           href={website || "#"}
           className="text-xl sm:text-2xl font-bold text-[#480CA8]"
           aria-label={website ? `Visit ${name}'s personal website (opens external site)` : `${name} — no website available`}
-          {...(website ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+          target="_blank"
+          rel="noopener noreferrer"
         >
           {name}
-        </Link>
+        </a>
         <div className="flex flex-col xs:flex-row gap-4 xs:gap-8 sm:gap-12 italic">
           <div className="flex justify-center xs:block">
             <Image
