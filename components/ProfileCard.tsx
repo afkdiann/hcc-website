@@ -33,7 +33,7 @@ function ProfileCard({
         <div className="flex flex-col xs:flex-row gap-4 xs:gap-8 sm:gap-12 italic">
           <div className="flex justify-center xs:block">
             <Image
-              src={image}
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}${image}`}
               alt={`Profile photo of ${name}`}
               width={150}
               height={150}

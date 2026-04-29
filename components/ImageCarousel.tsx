@@ -51,7 +51,7 @@ function ImageCarousel() {
                 <Card className="h-48 xs:h-64 sm:h-80 md:h-96 lg:h-120">
                   <CardContent className="flex h-full items-center justify-center p-6">
                     <Image
-                      src={"/images/research/" + image.src}
+                      src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/research/${image.src}`}
                       alt={image.alt}
                       width={750}
                       height={500}

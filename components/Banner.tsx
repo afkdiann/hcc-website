@@ -7,7 +7,7 @@ function Banner() {
       <Link href="https://iacs.stonybrook.edu/" aria-label="Visit the Institute for Advanced Computational Science (IACS) website (opens external site)" target="_blank" rel="noopener noreferrer">
         <div className="flex items-center m-4 sm:m-6 px-4 sm:pl-8 md:pl-8 lg:pl-16 xl:pl-32">
           <Image
-            src="/logos/iacs_logo.svg"
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logos/iacs_logo.svg`}
             alt="IACS Logo"
             width={300}
             height={200}
@@ -19,7 +19,7 @@ function Banner() {
       <Link href="/" aria-label="Human-Centered Computing - Go to home page">
         <div className="flex items-center m-4 px-4">
           <Image
-            src="/logos/hcc_logo_black.svg"
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logos/hcc_logo_black.svg`}
             alt="HCC Logo"
             width={75}
             height={50}
