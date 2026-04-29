@@ -4,7 +4,7 @@ import ResearchPageMainContent from "@/components/ResearchPageMainContent";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Research | Human-Centered Computing (HCC)",
+  title: "Research",
   description: "Current and past research projects from the HCC team",
 };
 

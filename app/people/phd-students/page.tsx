@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import PhdStudentsPage from "@/components/PhdStudentsPage";
 
 export const metadata: Metadata = {
-  title: "Phd Students | Human-Centered Computing (HCC)",
+  title: "PhD Students",
   description: "List of phd students on the HCC team",
 };
 

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import PostDocsPage from "@/components/PostDocsPage";
 
 export const metadata: Metadata = {
-  title: "Postdocs | Human-Centered Computing (HCC)",
+  title: "Postdocs",
   description: "List of postdoc on the HCC team",
 };
 

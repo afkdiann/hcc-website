@@ -25,9 +25,9 @@ function HomePage() {
         
         <div className="flex flex-col md:flex-row justify-center px-4 sm:px-6 md:px-8 gap-4 sm:gap-6 py-6 sm:py-8">
           <div className="w-full md:w-1/3 py-1 flex justify-center items-center flex-col space-y-4 md:space-y-9">
-            <h2 className="text-xl xs:text-2xl md:text-3xl font-bold text-center">
+            <h1 className="text-xl xs:text-2xl md:text-3xl font-bold text-center">
               Welcome to HCC!
-            </h2>
+            </h1>
             <p className="text-sm leading-5 sm:leading-6 md:leading-7 sm:text-base md:text-xl text-center">
               Human-Centered Computing is a research theme at the{" "}
               <a

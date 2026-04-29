@@ -4,7 +4,7 @@ import OpportunitiesPageMainContent from "@/components/OpportunitiesPageMainCont
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Opportunities | Human-Centered Computing (HCC)",
+  title: "Opportunities",
   description: "Hub for student involvement",
 };
 

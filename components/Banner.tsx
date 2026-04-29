@@ -25,9 +25,9 @@ function Banner() {
             height={50}
             className="w-12 sm:w-16 md:w-18.75 h-auto"
           />
-          <h1 className="text-md xs:text-lg md:text-xl text-center font-semibold ml-3 sm:ml-4">
+          <div className="text-md xs:text-lg md:text-xl text-center font-semibold ml-3 sm:ml-4">
             Human-Centered Computing
-          </h1>
+          </div>
         </div>
       </Link>
       </div>
