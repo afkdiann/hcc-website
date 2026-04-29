@@ -1,7 +1,12 @@
 self.__BUILD_MANIFEST = {
   "__rewrites": {
     "afterFiles": [],
-    "beforeFiles": [],
+    "beforeFiles": [
+      {
+        "source": "/hcc-website//_next/:path+",
+        "destination": "/hcc-website/_next/:path+"
+      }
+    ],
     "fallback": []
   },
   "sortedPages": [
