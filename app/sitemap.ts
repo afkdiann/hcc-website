@@ -3,7 +3,7 @@ import { MetadataRoute } from "next";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://afkdiann.github.io/hcc-website";
+  const baseUrl = "https://HCC-IACS.github.io/hcc-website";
 
   return [
     {

@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://afkdiann.github.io/hcc-website/sitemap.xml",
+    sitemap: "https://HCC-IACS.github.io/hcc-website/sitemap.xml",
   };
 }

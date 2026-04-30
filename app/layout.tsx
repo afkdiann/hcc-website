@@ -8,7 +8,7 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://afkdiann.github.io/hcc-website"),
+  metadataBase: new URL("https://HCC-IACS.github.io/hcc-website"),
   title: {
     template: "%s | Human-Centered Computing (HCC)",
     default: "Home | Human-Centered Computing (HCC)",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Human-Centered Computing (HCC)",
     description: "Human-Centered Computing is a research theme at the Institute for Advanced Computational Science (IACS) at Stony Brook University.",
-    url: "https://afkdiann.github.io/hcc-website",
+    url: "https://HCC-IACS.github.io/hcc-website",
     siteName: "Human-Centered Computing",
     images: [
       {
