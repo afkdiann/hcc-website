@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const basePath = process.env.GITHUB_ACTIONS ? '/hcc-website' : '';
+const basePath = process.env.GITHUB_ACTIONS ? '' : '';
 
 const nextConfig = {
   output: 'export',

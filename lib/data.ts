@@ -64,6 +64,10 @@ const researchProjects = [
 ]
 
 const opportunities = [
-  
+  {
+    name: "",
+    description: "",
+    PI: "",
+  }
 ]
 export { imageFiles, faculty, postdocs, phdStudents, researchProjects };
