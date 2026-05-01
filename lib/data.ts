@@ -23,6 +23,14 @@ const faculty = [
     website: " http://schedel.net/",
     email: "margaret.schedel@stonybrook.edu",
   },
+  {
+    name: "Tuhin Chakrabarty",
+    title: "Assistant Professor",
+    department: "Department of Computer Science",
+    image: "/images/people/tuhin.png",
+    website: " https://www.cs.stonybrook.edu/people/faculty/tuhinchakrabarty",
+    email: "tchakrabarty@cs.stonybrook.edu",
+  },
 ];
 
 const postdocs = [
