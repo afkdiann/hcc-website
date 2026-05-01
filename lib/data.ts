@@ -8,6 +8,14 @@ const imageFiles = [
 
 const faculty = [
   {
+    name: "Tuhin Chakrabarty",
+    title: "Assistant Professor",
+    department: "Department of Computer Science",
+    image: "/images/people/tuhin.png",
+    website: " https://www.cs.stonybrook.edu/people/faculty/tuhinchakrabarty",
+    email: "tchakrabarty@cs.stonybrook.edu",
+  },
+  {
     name: "Owen Rambow",
     title: "IACS Endowed Chair",
     department: "Department of Linguistics",
@@ -22,14 +30,6 @@ const faculty = [
     image: "/images/people/schedel.png",
     website: " http://schedel.net/",
     email: "margaret.schedel@stonybrook.edu",
-  },
-  {
-    name: "Tuhin Chakrabarty",
-    title: "Assistant Professor",
-    department: "Department of Computer Science",
-    image: "/images/people/tuhin.png",
-    website: " https://www.cs.stonybrook.edu/people/faculty/tuhinchakrabarty",
-    email: "tchakrabarty@cs.stonybrook.edu",
   },
 ];
 
