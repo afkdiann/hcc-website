@@ -35,7 +35,7 @@ const faculty = [
     name: "Jiawei (Joe) Zhou",
     title: "Assistant Professor",
     department: "Department of Applied Mathematics & Statistics / Computer Science",
-    image: "/images/people/jiawei.png",
+    image: "/images/people/jiawei.jpg",
     website: " https://www.cs.stonybrook.edu/people/faculty/jiawei-joezhou", 
     email: "jiawei.zhou.1@stonybrook.edu",
   },
