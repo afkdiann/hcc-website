@@ -16,6 +16,14 @@ const faculty = [
     email: "tchakrabarty@cs.stonybrook.edu",
   },
   {
+    name: "Jason Jeffrey Jones",
+    title: "Associate Professor",
+    department: "Department of Sociology",
+    image: "/images/people/jason.png",
+    website: " https://jasonjones.ninja/",
+    email: "Jason.J.Jones@stonybrook.edu",
+  },
+  {
     name: "Owen Rambow",
     title: "IACS Endowed Chair",
     department: "Department of Linguistics",
