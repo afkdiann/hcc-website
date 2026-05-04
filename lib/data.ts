@@ -31,6 +31,14 @@ const faculty = [
     website: " http://schedel.net/",
     email: "margaret.schedel@stonybrook.edu",
   },
+  {
+    name: "Jiawei (Joe) Zhou",
+    title: "Assistant Professor",
+    department: "Department of Applied Mathematics & Statistics / Computer Science",
+    image: "/images/people/jiawei.png",
+    website: " https://www.cs.stonybrook.edu/people/faculty/jiawei-joezhou", 
+    email: "jiawei.zhou.1@stonybrook.edu",
+  },
 ];
 
 const postdocs = [
