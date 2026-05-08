@@ -73,7 +73,7 @@ const phdStudents = [
     name: "Alina Shabaeva",
     title: "PhD Student",
     department: "Department of Linguistics",
-    image: "/images/people/alina.png",
+    image: "/images/people/alina2.png",
     email: "alina.shabaeva@stonybrook.edu",
   },
 ]
