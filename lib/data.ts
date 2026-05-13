@@ -40,6 +40,14 @@ const faculty = [
     email: "margaret.schedel@stonybrook.edu",
   },
   {
+    name: "Nicholas Wilson",
+    title: "Associate Professor",
+    department: "Department of Sociology",
+    image: "/images/people/nick.png",
+    website: " http://nickwilsonsoc.org/", 
+    email: "nicholas.wilson@stonybrook.edu",
+  },
+  {
     name: "Jiawei (Joe) Zhou",
     title: "Assistant Professor",
     department: "Department of Applied Mathematics & Statistics / Computer Science",
