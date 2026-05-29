@@ -103,4 +103,4 @@ const opportunities = [
   },
 ]
 
-export { imageFiles, faculty, postdocs, phdStudents, researchProjects };
+export { imageFiles, faculty, postdocs, phdStudents, researchProjects, opportunities };
